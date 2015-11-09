@@ -95,6 +95,31 @@
             <button class="btn btn-rectangle-lg" data-toggle="modal" data-target="#contactUsModal" role="button">Свяжитесь с нами!</button>
         </div>
         <hr class="divider"/>
+
+        <div class="container slider-review">
+            <div class="items">
+                <% var reviewsPhoto = ["male.png", "female.png", "male2.png", "male.png", "female.png", "male2.png"]; %>
+                <% reviewsPhoto.forEach(function(item){ %>
+                    <div class="item text-center">
+                        <img class="img-circle" src="img/characters/<%= item %>"
+                                 alt="Довольный клиент!" width="128px" height="128px">
+
+                        <div class="caption">
+                            <h3>Счастливый клиент</h3>
+                            <small>Проффесия</small>
+                            <p>«Lorem ipsum dolor sit amet, consectetur adipisicing elit.»</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur dicta
+                                excepturi
+                                illo ipsa nam necessitatibus, non porro qui tempore unde voluptate.
+                                Ab beatae explicabo facere iusto possimus quasi recusandae!</p>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+
+        <hr class="divider"/>
     </section>
     <section class="container" id="reviews2">
         <div class="col-sm-offset-1 col-md-offset-2 col-lg-offset-2">

@@ -275,10 +275,29 @@ hr {
 
 /* SECOND REVIEWS
 -------------------------------------------------- */
-
 $review2-item-width: 600px;
 $reviews2-item-count: 3;
 $reviews2-item-duration: 7.5s;
+
+.slider-review {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  .items {
+    width: $reviews2-item-count*100%;
+    -webkit-animation: hscroll $reviews2-item-count*$reviews2-item-duration infinite;
+    -moz-animation: hscroll $reviews2-item-count*$reviews2-item-duration infinite;
+    -ms-animation: hscroll $reviews2-item-count*$reviews2-item-duration infinite;
+    animation: hscroll $reviews2-item-count*$reviews2-item-duration infinite;
+  }
+  .item {
+    margin: 0;
+    float: left;
+    width: 100%/(3*$reviews2-item-count);
+    padding: 0 15px;
+  }
+}
+
 .horizontal-slider {
   //width: $review2-item-width;
   position: relative;
@@ -317,10 +336,10 @@ $reviews2-item-duration: 7.5s;
     margin-left: 0
   }
   33%, 59.75% {
-    margin-left: -100%;
+    margin-left: -33%;
   }
   66%, 93.75% {
-    margin-left: -200%;
+    margin-left: -66%;
   }
   100% {
     margin-left: 0
@@ -358,14 +377,26 @@ $reviews2-item-duration: 7.5s;
 }
 
 @keyframes hscroll {
-  0%, 26.75% {
+  0%, 10.41666666% {
     margin-left: 0
   }
-  33%, 59.75% {
+  16.66666666%, 27.08333333% {
+    margin-left: -33.33333333%;
+  }
+  33.33333333%, 43.75% {
+    margin-left: -66.66666666%;
+  }
+  50%, 60.41666666% {
     margin-left: -100%;
   }
-  66%, 93.75% {
-    margin-left: -200%;
+  66.66666666%, 77.08333333% {
+    //margin-left: -133.33333333%;
+    margin-left: -100%;
+
+  }
+  83.33333333%, 93.75%{
+    //margin-left: -166.66666666%;
+    margin-left: -100%;
   }
   100% {
     margin-left: 0;
