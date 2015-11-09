@@ -284,7 +284,7 @@ $reviews2-item-duration: 7.5s;
   overflow: hidden;
   margin: 0 auto;
   .items {
-    width: $reviews2-item-count*100%;
+    width: 600%;
     -webkit-animation: hscroll2 $reviews2-item-count*$reviews2-item-duration infinite;
     -moz-animation: hscroll2 $reviews2-item-count*$reviews2-item-duration infinite;
     -ms-animation: hscroll2 $reviews2-item-count*$reviews2-item-duration infinite;
@@ -293,7 +293,7 @@ $reviews2-item-duration: 7.5s;
   .item {
     margin: 0;
     float: left;
-    width: 100%/(3*$reviews2-item-count);
+    width: 100%/(6*$reviews2-item-count);
     padding: 0 15px;
   }
 }
@@ -594,5 +594,201 @@ $reviews2-item-duration: 7.5s;
 -------------------------------------------------- */
 
 @media (max-width: 767px) {
+  .slider-review {
+    .item {
+      width: 16.66666666%;
+    }
+  }
+  @-webkit-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0
+    }
+    16.66666666%, 27.08333333% {
+      margin-left: -100%;
+    }
+    33.33333333%, 43.75% {
+      margin-left: -200%;
+    }
+    50%, 60.41666666% {
+      margin-left: -300%;
+    }
+    66.66666666%, 77.08333333% {
+      margin-left: -400%;
+    }
+    83.33333333%, 93.75%{
+      margin-left: -500%;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
+  @-moz-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0
+    }
+    16.66666666%, 27.08333333% {
+      margin-left: -100%;
+    }
+    33.33333333%, 43.75% {
+      margin-left: -200%;
+    }
+    50%, 60.41666666% {
+      margin-left: -300%;
+    }
+    66.66666666%, 77.08333333% {
+      margin-left: -400%;
+    }
+    83.33333333%, 93.75%{
+      margin-left: -500%;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
+  @-ms-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0
+    }
+    16.66666666%, 27.08333333% {
+      margin-left: -100%;
+    }
+    33.33333333%, 43.75% {
+      margin-left: -200%;
+    }
+    50%, 60.41666666% {
+      margin-left: -300%;
+    }
+    66.66666666%, 77.08333333% {
+      margin-left: -400%;
+    }
+    83.33333333%, 93.75%{
+      margin-left: -500%;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
+  @keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0
+    }
+    16.66666666%, 27.08333333% {
+      margin-left: -100%;
+    }
+    33.33333333%, 43.75% {
+      margin-left: -200%;
+    }
+    50%, 60.41666666% {
+      margin-left: -300%;
+    }
+    66.66666666%, 77.08333333% {
+      margin-left: -400%;
+    }
+    83.33333333%, 93.75%{
+      margin-left: -500%;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
+}
 
+@media (min-width: 767px) and (max-width: 1170px){
+  .slider-review {
+    .item {
+      width: 8.33333333%;
+    }
+  }
+  @-webkit-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0
+    }
+    16.66666666%, 27.08333333% {
+      margin-left: -50%;
+    }
+    33.33333333%, 43.75% {
+      margin-left: -100%;
+    }
+    50%, 60.41666666% {
+      margin-left: -150%;
+    }
+    66.66666666%, 77.08333333% {
+      margin-left: -200%;
+    }
+    83.33333333%, 93.75%{
+      margin-left: -200%;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
+  @-moz-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0
+    }
+    16.66666666%, 27.08333333% {
+      margin-left: -50%;
+    }
+    33.33333333%, 43.75% {
+      margin-left: -100%;
+    }
+    50%, 60.41666666% {
+      margin-left: -150%;
+    }
+    66.66666666%, 77.08333333% {
+      margin-left: -200%;
+    }
+    83.33333333%, 93.75%{
+      margin-left: -200%;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
+  @-ms-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0
+    }
+    16.66666666%, 27.08333333% {
+      margin-left: -50%;
+    }
+    33.33333333%, 43.75% {
+      margin-left: -100%;
+    }
+    50%, 60.41666666% {
+      margin-left: -150%;
+    }
+    66.66666666%, 77.08333333% {
+      margin-left: -200%;
+    }
+    83.33333333%, 93.75%{
+      margin-left: -200%;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
+  @keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0
+    }
+    16.66666666%, 27.08333333% {
+      margin-left: -50%;
+    }
+    33.33333333%, 43.75% {
+      margin-left: -100%;
+    }
+    50%, 60.41666666% {
+      margin-left: -150%;
+    }
+    66.66666666%, 77.08333333% {
+      margin-left: -200%;
+    }
+    83.33333333%, 93.75%{
+      margin-left: -200%;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
 }

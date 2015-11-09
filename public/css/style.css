@@ -228,7 +228,7 @@ hr {
   overflow: hidden;
   margin: 0 auto; }
   .slider-review .items {
-    width: 300%;
+    width: 600%;
     -webkit-animation: hscroll2 22.5s infinite;
     -moz-animation: hscroll2 22.5s infinite;
     -ms-animation: hscroll2 22.5s infinite;
@@ -236,7 +236,7 @@ hr {
   .slider-review .item {
     margin: 0;
     float: left;
-    width: 11.11111%;
+    width: 5.55556%;
     padding: 0 15px; }
 
 @-webkit-keyframes hscroll2 {
@@ -454,5 +454,133 @@ hr {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+@media (max-width: 767px) {
+  .slider-review .item {
+    width: 16.66666666%; }
+
+  @-webkit-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0; }
+    16.66666666%, 27.08333333% {
+      margin-left: -100%; }
+    33.33333333%, 43.75% {
+      margin-left: -200%; }
+    50%, 60.41666666% {
+      margin-left: -300%; }
+    66.66666666%, 77.08333333% {
+      margin-left: -400%; }
+    83.33333333%, 93.75% {
+      margin-left: -500%; }
+    100% {
+      margin-left: 0; } }
+  @-moz-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0; }
+    16.66666666%, 27.08333333% {
+      margin-left: -100%; }
+    33.33333333%, 43.75% {
+      margin-left: -200%; }
+    50%, 60.41666666% {
+      margin-left: -300%; }
+    66.66666666%, 77.08333333% {
+      margin-left: -400%; }
+    83.33333333%, 93.75% {
+      margin-left: -500%; }
+    100% {
+      margin-left: 0; } }
+  @-ms-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0; }
+    16.66666666%, 27.08333333% {
+      margin-left: -100%; }
+    33.33333333%, 43.75% {
+      margin-left: -200%; }
+    50%, 60.41666666% {
+      margin-left: -300%; }
+    66.66666666%, 77.08333333% {
+      margin-left: -400%; }
+    83.33333333%, 93.75% {
+      margin-left: -500%; }
+    100% {
+      margin-left: 0; } }
+  @keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0; }
+    16.66666666%, 27.08333333% {
+      margin-left: -100%; }
+    33.33333333%, 43.75% {
+      margin-left: -200%; }
+    50%, 60.41666666% {
+      margin-left: -300%; }
+    66.66666666%, 77.08333333% {
+      margin-left: -400%; }
+    83.33333333%, 93.75% {
+      margin-left: -500%; }
+    100% {
+      margin-left: 0; } } }
+@media (min-width: 767px) and (max-width: 1170px) {
+  .slider-review .item {
+    width: 8.33333333%; }
+
+  @-webkit-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0; }
+    16.66666666%, 27.08333333% {
+      margin-left: -50%; }
+    33.33333333%, 43.75% {
+      margin-left: -100%; }
+    50%, 60.41666666% {
+      margin-left: -150%; }
+    66.66666666%, 77.08333333% {
+      margin-left: -200%; }
+    83.33333333%, 93.75% {
+      margin-left: -200%; }
+    100% {
+      margin-left: 0; } }
+  @-moz-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0; }
+    16.66666666%, 27.08333333% {
+      margin-left: -50%; }
+    33.33333333%, 43.75% {
+      margin-left: -100%; }
+    50%, 60.41666666% {
+      margin-left: -150%; }
+    66.66666666%, 77.08333333% {
+      margin-left: -200%; }
+    83.33333333%, 93.75% {
+      margin-left: -200%; }
+    100% {
+      margin-left: 0; } }
+  @-ms-keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0; }
+    16.66666666%, 27.08333333% {
+      margin-left: -50%; }
+    33.33333333%, 43.75% {
+      margin-left: -100%; }
+    50%, 60.41666666% {
+      margin-left: -150%; }
+    66.66666666%, 77.08333333% {
+      margin-left: -200%; }
+    83.33333333%, 93.75% {
+      margin-left: -200%; }
+    100% {
+      margin-left: 0; } }
+  @keyframes hscroll2 {
+    0%, 10.41666666% {
+      margin-left: 0; }
+    16.66666666%, 27.08333333% {
+      margin-left: -50%; }
+    33.33333333%, 43.75% {
+      margin-left: -100%; }
+    50%, 60.41666666% {
+      margin-left: -150%; }
+    66.66666666%, 77.08333333% {
+      margin-left: -200%; }
+    83.33333333%, 93.75% {
+      margin-left: -200%; }
+    100% {
+      margin-left: 0; } } }
 
 /*# sourceMappingURL=style.css.map */

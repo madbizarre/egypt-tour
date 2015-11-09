@@ -37,7 +37,9 @@
 <header class="intro text-center white" id="intro" role="presentation">
     <div class="container">
         <h1 class="text-uppercase vcenter col-xs-12"><%= title %></h1>
-        <button class="btn btn-rectangle-lg btn-transparent" data-toggle="modal" data-target="#contactUsModal" role="button">Свяжитесь с нами!</button>
+        <button class="btn btn-rectangle-lg btn-transparent" data-toggle="modal" data-target="#contactUsModal"
+                role="button">Свяжитесь с нами!
+        </button>
     </div>
 </header>
 
@@ -71,7 +73,7 @@
             <div class="row">
                 <% var reviewsPhoto = ["male.png", "female.png", "male2.png"]; %>
                 <% reviewsPhoto.forEach(function(item){ %>
-                <div class="col-lg-4 text-center">
+                <div class="text-center">
                     <div class="thumbnail">
                         <img class="img-circle img-responsive" src="img/characters/<%= item %>"
                              alt="Довольный клиент!" width="128px" height="128px">
@@ -92,7 +94,9 @@
             </div>
         </div>
         <div class="container text-center">
-            <button class="btn btn-rectangle-lg" data-toggle="modal" data-target="#contactUsModal" role="button">Свяжитесь с нами!</button>
+            <button class="btn btn-rectangle-lg" data-toggle="modal" data-target="#contactUsModal" role="button">
+                Свяжитесь с нами!
+            </button>
         </div>
         <hr class="divider"/>
 
@@ -100,21 +104,21 @@
             <div class="items">
                 <% var reviewsPhoto = ["male.png", "female.png", "male2.png", "male.png", "female.png", "male2.png"]; %>
                 <% reviewsPhoto.forEach(function(item){ %>
-                    <div class="item text-center">
-                        <img class="img-circle" src="img/characters/<%= item %>"
-                                 alt="Довольный клиент!" width="128px" height="128px">
+                <div class="item text-center">
+                    <img class="img-circle" src="img/characters/<%= item %>"
+                         alt="Довольный клиент!" width="128px" height="128px">
 
-                        <div class="caption">
-                            <h3>Счастливый клиент</h3>
-                            <small>Проффесия</small>
-                            <p>«Lorem ipsum dolor sit amet, consectetur adipisicing elit.»</p>
+                    <div class="caption">
+                        <h3>Счастливый клиент</h3>
+                        <small>Проффесия</small>
+                        <p>«Lorem ipsum dolor sit amet, consectetur adipisicing elit.»</p>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur dicta
-                                excepturi
-                                illo ipsa nam necessitatibus, non porro qui tempore unde voluptate.
-                                Ab beatae explicabo facere iusto possimus quasi recusandae!</p>
-                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur dicta
+                            excepturi
+                            illo ipsa nam necessitatibus, non porro qui tempore unde voluptate.
+                            Ab beatae explicabo facere iusto possimus quasi recusandae!</p>
                     </div>
+                </div>
                 <% }); %>
             </div>
         </div>
@@ -173,8 +177,6 @@
         </ul>
     </section>
 </main>
-<!-- /.container -->
-<!-- FOOTER -->
 
 <footer>
     <div class="container">
@@ -225,7 +227,6 @@
     </div>
 </footer>
 
-<!-- MODAL -->
 <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModal">
     <div class="modal-dialog">
         <div class="modal-content contact">
@@ -259,15 +260,10 @@
                 </form>
             </div>
         </div>
-        <!-- /.modal-content -->
     </div>
-    <!-- /.modal-dialog -->
 </div>
-<!-- /.modal -->
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 <script src="js/main.js"></script>
