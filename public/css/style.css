@@ -229,16 +229,76 @@ hr {
   margin: 0 auto; }
   .slider-review .items {
     width: 300%;
-    -webkit-animation: hscroll 22.5s infinite;
-    -moz-animation: hscroll 22.5s infinite;
-    -ms-animation: hscroll 22.5s infinite;
-    animation: hscroll 22.5s infinite; }
+    -webkit-animation: hscroll2 22.5s infinite;
+    -moz-animation: hscroll2 22.5s infinite;
+    -ms-animation: hscroll2 22.5s infinite;
+    animation: hscroll2 22.5s infinite; }
   .slider-review .item {
     margin: 0;
     float: left;
     width: 11.11111%;
     padding: 0 15px; }
 
+@-webkit-keyframes hscroll2 {
+  0%, 10.41666666% {
+    margin-left: 0; }
+  16.66666666%, 27.08333333% {
+    margin-left: -33.33333333%; }
+  33.33333333%, 43.75% {
+    margin-left: -66.66666666%; }
+  50%, 60.41666666% {
+    margin-left: -100%; }
+  66.66666666%, 77.08333333% {
+    margin-left: -100%; }
+  83.33333333%, 93.75% {
+    margin-left: -100%; }
+  100% {
+    margin-left: 0; } }
+@-moz-keyframes hscroll2 {
+  0%, 10.41666666% {
+    margin-left: 0; }
+  16.66666666%, 27.08333333% {
+    margin-left: -33.33333333%; }
+  33.33333333%, 43.75% {
+    margin-left: -66.66666666%; }
+  50%, 60.41666666% {
+    margin-left: -100%; }
+  66.66666666%, 77.08333333% {
+    margin-left: -100%; }
+  83.33333333%, 93.75% {
+    margin-left: -100%; }
+  100% {
+    margin-left: 0; } }
+@-ms-keyframes hscroll2 {
+  0%, 10.41666666% {
+    margin-left: 0; }
+  16.66666666%, 27.08333333% {
+    margin-left: -33.33333333%; }
+  33.33333333%, 43.75% {
+    margin-left: -66.66666666%; }
+  50%, 60.41666666% {
+    margin-left: -100%; }
+  66.66666666%, 77.08333333% {
+    margin-left: -100%; }
+  83.33333333%, 93.75% {
+    margin-left: -100%; }
+  100% {
+    margin-left: 0; } }
+@keyframes hscroll2 {
+  0%, 10.41666666% {
+    margin-left: 0; }
+  16.66666666%, 27.08333333% {
+    margin-left: -33.33333333%; }
+  33.33333333%, 43.75% {
+    margin-left: -66.66666666%; }
+  50%, 60.41666666% {
+    margin-left: -100%; }
+  66.66666666%, 77.08333333% {
+    margin-left: -100%; }
+  83.33333333%, 93.75% {
+    margin-left: -100%; }
+  100% {
+    margin-left: 0; } }
 .horizontal-slider {
   position: relative;
   overflow: hidden;
@@ -267,9 +327,9 @@ hr {
   0%, 26.75% {
     margin-left: 0; }
   33%, 59.75% {
-    margin-left: -33%; }
+    margin-left: -100%; }
   66%, 93.75% {
-    margin-left: -66%; }
+    margin-left: -200%; }
   100% {
     margin-left: 0; } }
 @-moz-keyframes hscroll {
@@ -291,18 +351,12 @@ hr {
   100% {
     margin-left: 0; } }
 @keyframes hscroll {
-  0%, 10.41666666% {
+  0%, 26.75% {
     margin-left: 0; }
-  16.66666666%, 27.08333333% {
-    margin-left: -33.33333333%; }
-  33.33333333%, 43.75% {
-    margin-left: -66.66666666%; }
-  50%, 60.41666666% {
+  33%, 59.75% {
     margin-left: -100%; }
-  66.66666666%, 77.08333333% {
-    margin-left: -100%; }
-  83.33333333%, 93.75% {
-    margin-left: -100%; }
+  66%, 93.75% {
+    margin-left: -200%; }
   100% {
     margin-left: 0; } }
 .map {
