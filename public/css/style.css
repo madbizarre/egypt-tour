@@ -56,6 +56,9 @@ hr {
     background-color: #052e55;
     color: #fdebda; }
 
+.btn:focus, .btn:active {
+  outline: none !important; }
+
 .btn-transparent {
   background-color: rgba(237, 237, 237, 0.2);
   border: 1px black solid;
