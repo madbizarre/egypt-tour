@@ -225,7 +225,7 @@ hr {
   overflow: hidden; }
 
 .responsive {
-  padding: 0 15px; }
+  padding: 0 25px; }
   .responsive .slick-slide:focus, .responsive .slick-slide:active {
     outline: none !important; }
 
