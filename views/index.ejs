@@ -28,11 +28,17 @@
 <nav class="nav-desktop">
     <ul class="list-unstyled">
         <li><a href="#intro">Домой</a></li>
-        <li><a href="#1">Ссылка 1</a></li>
-        <li><a href="#2">Ссылка 2</a></li>
-        <li><a href="#3">Ссылка 3</a></li>
+        <li><a href="#work">Схема работы</a></li>
         <li><a href="#reviews">Отзывы</a></li>
-        <li><a href="#map-section">Как найти нас</a></li>
+        <li><a href="#photo">Фотографии наших клиентов</a></li>
+        <li><a href="#map-section">Как нас найти</a></li>
+        <li><a href="javascript:void(0);" onclick="return false;">
+                <adress>
+                    <i class="fa fa-phone"></i> +7 (812) 339-61-19<br/>
+                    <i class="fa fa-phone"></i> +7 (921) 589-50-21<br/>
+                    <i class="fa fa-envelope-o"></i> tchaykun@konturbalt.ru
+                </adress>
+            </a></li>
     </ul>
 </nav>
 
@@ -47,24 +53,79 @@
 
 <main role="main">
 
-    <section class="white" id="1">
+    <section class="white" id="work">
         <div class="container text-center">
-            <h1 class="text-uppercase ">Заголовок 1</h1>
+            <h1 class="text-uppercase">Схема работы</h1>
             <hr class="subtitle-divider"/>
-        </div>
-    </section>
-
-    <section class="container" id="2">
-
-        <h1 class="text-uppercase text-center">Заголовок 2</h1>
-        <hr class="subtitle-divider"/>
-
-    </section>
-
-    <section class="white" id="3">
-        <div class="container">
-            <h1 class="text-uppercase text-center">Заголовок 3</h1>
-            <hr class="subtitle-divider"/>
+            <ul class="list-inline">
+                <% var schemeLiClass = "col-xs-12 col-sm-6 col-md-2" %>
+                <li class="<%= schemeLiClass %>">
+                    <img src="img/icons/choose.png" alt="">
+                    <h4>Оставляете заявку на сайте
+                        или звоните по телефону,
+                        выбираете экскурсию
+                        и определяетесь с датой</h4>
+                </li>
+                <li class="<%= schemeLiClass %>">
+                    <img src="img/icons/check.png" alt="">
+                    <h4>Оставляете заявку на сайте
+                        или звоните по телефону,
+                        выбираете экскурсию
+                        и определяетесь с датой</h4>
+                </li>
+                <li class="<%= schemeLiClass %>">
+                    <img src="img/icons/calendar.png" alt="">
+                    <h4>Согласовываем с вами
+                        программу экскурсии и
+                        уточняем дни работы
+                        объектов</h4>
+                </li>
+                <li class="<%= schemeLiClass %>">
+                    <img src="img/icons/money.png" alt="">
+                    <h4>Вы любым удобным
+                        способом оплачиваете
+                        экскурсию или квест</h4>
+                </li>
+                <li class="<%= schemeLiClass %>">
+                    <img src="img/icons/creditcard.png" alt="">
+                    <h4>Вы любым удобным
+                        способом оплачиваете
+                        экскурсию или квест</h4>
+                </li>
+                <li class="<%= schemeLiClass %>">
+                    <img src="img/icons/document.png" alt="">
+                    <h4>Мы передаем вам
+                        необходимые документы</h4>
+                </li>
+                <li class="<%= schemeLiClass %>" style="opacity: 0;">
+                    <img src="img/icons/document2.png" alt="">
+                    <h4>Мы передаем вам
+                        необходимые документы</h4>
+                </li>
+                <li class="<%= schemeLiClass %>">
+                    <img src="img/icons/document2.png" alt="">
+                    <h4>Мы передаем вам
+                        необходимые документы</h4>
+                </li>
+                <li class="<%= schemeLiClass %>">
+                    <img src="img/icons/plane.png" alt="">
+                    <h4>В назначенный день
+                        подаем автобус и
+                        проводим экскурсию</h4>
+                </li>
+                <li class="<%= schemeLiClass %>">
+                    <img src="img/icons/plane2.png" alt="">
+                    <h4>В назначенный день
+                        подаем автобус и
+                        проводим экскурсию</h4>
+                </li>
+                <li class="<%= schemeLiClass %>">
+                    <img src="img/icons/plane3.png" alt="">
+                    <h4>В назначенный день
+                        подаем автобус и
+                        проводим экскурсию</h4>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -82,7 +143,7 @@
 
                         <div class="caption">
                             <h3>Счастливый клиент</h3>
-                            <small>Проффесия</small>
+                            <small>Профессия</small>
                             <p>«Lorem ipsum dolor sit amet, consectetur adipisicing elit.»</p>
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur dicta
@@ -112,7 +173,7 @@
 
                     <div class="caption">
                         <h3>Счастливый клиент</h3>
-                        <small>Проффесия</small>
+                        <small>Профессия</small>
                         <p>«Lorem ipsum dolor sit amet, consectetur adipisicing elit.»</p>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur dicta
@@ -141,7 +202,7 @@
                         <div class="col-xs-12 col-sm-8 col-lg-9">
                             <h4>Счастливый Клиент</h4>
 
-                            <small>Проффесия</small>
+                            <small>Профессия</small>
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing
                                 elit. Ab aspernatur
@@ -166,7 +227,7 @@
 
                 <div class="caption">
                     <h3>Счастливый клиент</h3>
-                    <small>Проффесия</small>
+                    <small>Профессия</small>
                     <p>«Lorem ipsum dolor sit amet, consectetur adipisicing elit.»</p>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur dicta
@@ -179,13 +240,22 @@
         </div>
     </section>
 
+    <section class="white" id="photo">
+        <div class="container">
+            <h1 class="text-uppercase text-center">Фотографии наших клиентов</h1>
+            <hr class="subtitle-divider"/>
+        </div>
+    </section>
+
     <section class="map gray" id="map-section">
         <ul class="list-inline">
             <li class="col-xs-12 col-md-9" style="height:400px">
                 <div id="map" style="width: 100%; height: 100%;"></div>
             </li>
             <li class="col-xs-12 col-md-3 text-center">
-                <h1>Логотип</h1>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <img src="img/logo.png" alt="Контурбалт" width="100%">
+                </div>
 
                 <h1><%= title %></h1>
 
@@ -193,8 +263,8 @@
                     <span class="fa fa-map-marker fa-4x"></span>
                     <address>
                         <p><strong>Наш адрес:</strong><br/>
-                            Невский проспект, 28 <br/>
-                            Санкт-Петербург, Россия
+                            Санкт-Петербург, В.О. 9-линия 34,<br/>
+                            БЦ «Магнус», офис 201.
                         </p>
                     </address>
                 </div>
@@ -210,7 +280,8 @@
                 <span class="fa fa-phone fa-4x"></span>
                 <address>
                     <p><strong>Телефон:</strong><br/>
-                        +7 (123) 456-78-90
+                        +7 (812) 339-61-19 (Городской)<br/>
+                        +7 (921) 589-50-21 (МегаФон)
                     </p>
                 </address>
             </li>
@@ -218,7 +289,7 @@
                 <span class="fa fa-envelope fa-4x"></span>
                 <address>
                     <p><strong>Почта:</strong><br/>
-                        example@gmail.com
+                        tchaykun@konturbalt.ru
                     </p>
                 </address>
             </li>
@@ -296,7 +367,7 @@
 <script src="js/main.js"></script>
 <script type="text/javascript">
 
-    $(document).ready(function(){
+    $(document).ready(function (){
         $('.responsive').slick({
             dots: true,
             infinite: true,
