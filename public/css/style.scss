@@ -1016,3 +1016,9 @@ $reviews2-item-duration: 7.5s;
     }
   }
 }
+@media (max-width: 768px) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
