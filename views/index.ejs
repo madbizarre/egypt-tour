@@ -149,15 +149,40 @@
                         assumenda corporis, dolorem dolores enim eum, facere fugiat labore nemo
                         praesentium reiciendis rem repellat repellendus totam. Amet commodi ipsa
                         voluptatibus!</p>
-                </div></div>
+                </div>
+            </div>
             <% }); %>
         </div>
     </section>
 
-    <section class="white" id="photo">
+    <!--<section class="white" id="photo">-->
+    <section id="photo">
+        <hr class="divider"/>
         <div class="container">
             <h1 class="text-uppercase text-center">Фотографии наших клиентов</h1>
             <hr class="subtitle-divider"/>
+            <div class="row">
+            <% var reviewsPhoto = ["male.png", "female.png", "male2.png", "male.png", "female.png", "male2.png", "male.png", "female.png", "male2.png"]; %>
+            <% var reviewsEffect = ["effect1", "effect2", "effect3", "effect4", "effect5", "effect6", "effect7", "effect8", "effect9"]; %>
+            <% reviewsPhoto.forEach(function(item, i){ %>
+            <div class="slider-item col-sm-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-12 <%= reviewsEffect[i] %>">
+                <div class="col-xs-12 col-sm-4 col-lg-3 text-center">
+                    <img style="display: inline;" src="img/characters/<%= item %>" height="128px" width="128px"/>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-lg-9">
+                    <h4>Счастливый Клиент</h4>
+
+                    <small>Профессия</small>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Ab aspernatur
+                        assumenda corporis, dolorem dolores enim eum, facere fugiat labore nemo
+                        praesentium reiciendis rem repellat repellendus totam. Amet commodi ipsa
+                        voluptatibus!</p>
+                </div>
+            </div>
+            <% }); %>
+            </div>
         </div>
     </section>
 
