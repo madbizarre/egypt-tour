@@ -650,7 +650,7 @@ hr {
   margin: 1vh; }
   #imageModal img {
     height: 90vh;
-    max-width: 90vw;
+    max-width: 80vw;
     width: auto;
     padding: 2vh;
     -webkit-border-radius: 5px;

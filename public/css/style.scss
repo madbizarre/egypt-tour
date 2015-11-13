@@ -517,6 +517,10 @@ hr {
       visibility: hidden;
       @include transform(rotate(-60deg) skewY(30deg));
 
+      &:active, &:focus {
+        //margin: ;
+      }
+
       * {
         position: absolute;
         visibility: visible;
@@ -718,7 +722,7 @@ hr {
   margin: 1vh;
   img {
     height: 90vh;
-    max-width: 90vw;
+    max-width: 80vw;
     width: auto;
     padding: 2vh;
     @include border-radius(5px);
@@ -726,7 +730,6 @@ hr {
     object-fit: cover;
     -o-object-fit: cover;
   }
-
 }
 
 .map {

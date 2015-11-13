@@ -329,8 +329,13 @@
 </div>
 
 <div class="modal fade text-center" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModal">
-    <img id="mimg" src="" alt="">
-
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+            <img id="mimg" src="" alt="">
+        </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -374,7 +379,7 @@
         DG.marker([59.941211, 30.276873]).addTo(map).bindPopup('Санкт-Петербург, В.О. 9-линия 34, БЦ «Магнус», офис 201');
     });
 
-    $(window).load(function (){
+/*    $(window).load(function (){
         $('#categories li').on('click', function (){
             var sr = $(this).find('img').attr('src');
             $('#mimg').attr('src', sr);
@@ -383,8 +388,7 @@
         $('#mimg').on('click', function(){
             $('#imageModal').modal('hide');
         });
-    });
-
+    });*/
 </script>
 </body>
 </html>
