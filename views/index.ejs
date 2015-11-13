@@ -381,23 +381,11 @@
             $('#mimg').attr('src', sr);
             $('#imageModal').modal('show');
         });
+        $('#mimg').on('click', function(){
+            $('#imageModal').modal('hide');
+        });
     });
 
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-    });
 </script>
 </body>
 </html>
