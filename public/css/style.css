@@ -649,9 +649,9 @@ hr {
   overflow: hidden;
   padding-top: 1vh; }
   #imageModal img {
-    height: 90vh;
+    height: 90vm;
     width: auto;
-    padding: 2vh;
+    padding: 2vm;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
