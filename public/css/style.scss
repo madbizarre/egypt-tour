@@ -854,7 +854,9 @@ footer {
   .map {
     color: #000;
     .map-marker {
-      color: #f5f5f5;
+      span {
+        color: #f5f5f5;
+      }
       margin-top: 20px;
     }
   }
