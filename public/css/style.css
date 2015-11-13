@@ -537,12 +537,6 @@ hr {
         padding-top: 50%;
         top: 110%;
         padding-bottom: 50%; }
-      #photo #categories li div:hover h1 {
-        bottom: 50%;
-        padding-bottom: 10%; }
-      #photo #categories li div:hover p {
-        top: 50%;
-        padding-top: 10%; }
   @media (min-width: 1201px) {
     #photo #categories li {
       width: 19.2%;
