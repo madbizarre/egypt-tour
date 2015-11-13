@@ -498,16 +498,7 @@ hr {
     width: 90%;
     margin: 0 auto;
 
-    div {
-      h1, p {
-        width: 90%;
-        padding: 0 5%;
-        background-color: #00B423;
-        background-color: rgba(0, 180, 35, 0.5);
-        font-family: 'Raleway', sans-serif;
-        @include transition(all .2s ease-in-out);
-      }
-    }
+
 
     li {
       position: relative;

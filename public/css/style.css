@@ -469,17 +469,6 @@ hr {
     overflow: hidden;
     width: 90%;
     margin: 0 auto; }
-    #photo #categories div h1, #photo #categories div p {
-      width: 90%;
-      padding: 0 5%;
-      background-color: #00B423;
-      background-color: rgba(0, 180, 35, 0.5);
-      font-family: 'Raleway', sans-serif;
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -ms-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
     #photo #categories li {
       position: relative;
       list-style-type: none;
