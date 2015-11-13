@@ -33,12 +33,20 @@
         <li><a href="#photo"> Фотографии наших клиентов</a></li>
         <li><a href="#findUs"> Как нас найти</a></li>
         <li><a href="javascript:void(0);" onclick="return false;">
-                <adress>
-                    <i class="fa fa-phone"></i> +7 (812) 339-61-19<br/>
-                    <i class="fa fa-phone"></i> +7 (921) 589-50-21<br/>
-                    <i class="fa fa-envelope-o"></i> tchaykun@konturbalt.ru
-                </adress>
-            </a></li>
+                <i class="fa fa-phone"></i>
+                +7 (812) 339-61-19
+            </a>
+        </li>
+        <li><a href="javascript:void(0);" onclick="return false;">
+                <i class="fa fa-phone"></i>
+                +7 (921) 589-50-21
+            </a>
+        </li>
+        <li><a href="javascript:void(0);" onclick="return false;">
+                <i class="fa fa-envelope-o"></i>
+                tchaykun@konturbalt.ru
+            </a>
+        </li>
     </ul>
 </nav>
 
@@ -156,12 +164,11 @@
     </section>
 
     <!--<section class="white" id="photo">-->
-    <section id="photo">
+    <section class="container" id="examples">
         <hr class="divider"/>
-        <div class="container">
-            <h1 class="text-uppercase text-center">Фотографии наших клиентов</h1>
-            <hr class="subtitle-divider"/>
-            <div class="row">
+        <h1 class="text-uppercase text-center">Примеры карточек</h1>
+        <hr class="subtitle-divider"/>
+        <div class="row">
             <% var reviewsPhoto = ["male.png", "female.png", "male2.png", "male.png", "female.png", "male2.png", "male.png", "female.png", "male2.png"]; %>
             <% var reviewsEffect = ["effect1", "effect2", "effect3", "effect4", "effect5", "effect6", "effect7", "effect8", "effect9"]; %>
             <% reviewsPhoto.forEach(function(item, i){ %>
@@ -182,7 +189,29 @@
                 </div>
             </div>
             <% }); %>
-            </div>
+        </div>
+    </section>
+
+    <section class="white" id="photo">
+        <h1 class="text-uppercase text-center">Фотографии наших клиентов</h1>
+        <hr class="subtitle-divider"/>
+
+        <div class="container">
+
+            <ul id="categories">
+                <% for (var i = 1 ; i < 24 ; i++ ){ %>
+                <li>
+                    <div>
+                        <img src="img/photo/<%= i %>.jpg" alt="" width="100%"/>
+
+                        <h1>This is a title</h1>
+
+                        <p>Some sample text about the article this hexagon leads to</p>
+                    </div>
+                </li>
+                <% } %>
+            </ul>
+
         </div>
     </section>
 
@@ -225,7 +254,7 @@
                     </p>
                 </address>
             </li>
-            <li class="col-xs-12 col-sm-6 col-sm-3">
+            <li class="col-xs-12 col-sm-6 col-sm-3" style="color: black;">
                 <span class="fa fa-envelope fa-4x"></span>
                 <address>
                     <p><strong>Почта:</strong><br/>
@@ -300,6 +329,11 @@
     </div>
 </div>
 
+<div class="modal fade text-center" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModal">
+    <img id="mimg" src="" alt="">
+
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
@@ -307,7 +341,6 @@
 <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 <script src="js/main.js"></script>
 <script type="text/javascript">
-
     $(document).ready(function (){
         $('.responsive').slick({
             dots: true,
@@ -340,6 +373,30 @@
         DG.control.location({position: 'bottomright'}).addTo(map);
         DG.control.traffic().addTo(map);
         DG.marker([59.941211, 30.276873]).addTo(map).bindPopup('Санкт-Петербург, В.О. 9-линия 34, БЦ «Магнус», офис 201');
+    });
+
+    $(window).load(function (){
+        $('#categories li').on('click', function (){
+            var sr = $(this).find('img').attr('src');
+            $('#mimg').attr('src', sr);
+            $('#imageModal').modal('show');
+        });
+    });
+
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
     });
 </script>
 </body>
