@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* MIXINS
 -------------------------------------------------- */
 @mixin border-radius($values) {
@@ -78,6 +77,7 @@
 //font-family: 'Comfortaa', cursive;
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 //font-family: 'Open Sans';
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
 
 /* VARIABLES
 -------------------------------------------------- */
@@ -301,7 +301,7 @@ hr {
   overflow: hidden;
 }
 
-.responsive {
+.slider {
   padding: 0 25px;
   .slick-slide {
     &:focus, &:active {
@@ -488,24 +488,17 @@ hr {
 
 #photo {
   .container * {
-    margin: 0;
-    padding: 0;
+
   }
   padding-bottom: 100px;
 
   #categories {
     overflow: hidden;
-    width: 90%;
+    padding: 0;
     margin: 0 auto;
-
     div {
-      h1, p {
-        width: 90%;
-        padding: 0 5%;
-        background-color: #00B423;
-        background-color: rgba(0, 180, 35, 0.5);
-        font-family: 'Raleway', sans-serif;
-        @include transition(all .2s ease-in-out);
+      &:focus, &:active {
+        outline: none !important;
       }
     }
 
@@ -516,10 +509,6 @@ hr {
       overflow: hidden;
       visibility: hidden;
       @include transform(rotate(-60deg) skewY(30deg));
-
-      &:active, &:focus {
-        //margin: ;
-      }
 
       * {
         position: absolute;
@@ -535,9 +524,17 @@ hr {
         @include transform(skewY(-30deg) rotate(60deg));
         backface-visibility: hidden;
       }
+      a {
+        position: initial;
+        color: inherit;
+        text-decoration: none;
+        &:focus, &:active {
+          outline: none !important;
+        }
+      }
 
       /* HEX CONTENT */
-      img {
+      a img {
         left: -100%;
         right: -100%;
         width: 100%;
@@ -545,42 +542,6 @@ hr {
         object-fit: cover;
         -o-object-fit: cover;
         margin: 0 auto;
-      }
-      h1 {
-        bottom: 110%;
-        font-style: italic;
-        font-weight: normal;
-        font-size: 2.5rem;
-        padding-top: 100%;
-        padding-bottom: 100%;
-        &:after {
-          content: '';
-          display: block;
-          position: absolute;
-          bottom: -1px;
-          left: 45%;
-          width: 10%;
-          text-align: center;
-          z-index: 1;
-          border-bottom: 2px solid #fff;
-        }
-      }
-      p {
-        padding-top: 50%;
-        top: 110%;
-        padding-bottom: 50%;
-      }
-
-      /* HOVER EFFECT  */
-      div:hover {
-        h1 {
-          bottom: 50%;
-          padding-bottom: 10%;
-        }
-        p {
-          top: 50%;
-          padding-top: 10%;
-        }
       }
     }
 
@@ -620,7 +581,7 @@ hr {
 
   }
 
-  @media (max-width: 1200px) and (min-width: 901px) {
+  @media (max-width: 1200px) and (min-width: 901px){
     #categories {
       li {
         width: 24.25%; /* = (100-3) / 4 */
@@ -651,7 +612,7 @@ hr {
     }
   }
 
-  @media (max-width: 900px) and (min-width: 601px) {
+  @media (max-width: 900px) and (min-width: 601px){
     #categories {
       li {
         width: 32.666%; /* = (100-2) / 3 */
@@ -703,33 +664,92 @@ hr {
     }
   }
 
-  @media (max-width: 600px) and (orientation: portrait) {
-    #categories {
-      li {
-        h1 {
-          font-size: 1.5rem;
-        }
-        p {
-          font-size: 0.7rem;
-        }
-      }
+}
+
+.css-modal-img {
+  height: 60vh;
+  max-width: 80vw;
+  width: auto;
+  @include border-radius(5px);
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+
+/* **************CSS **
+ * Modal window
+ * *************** */
+.css-modal {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-shadow: 0 1px 0 #333;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  @include transition(opacity .4s linear);
+  @include transform(translate(0, 100%));
+  z-index: 1050;
+}
+
+.modal-inner {
+  position: fixed;
+  top: 5vh;
+  left: 20%;
+  right: 20%;
+  padding: 20px;
+  max-width: 80vw;
+  @include box-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+  @include box-sizing(border-box);
+  @include border-radius(15px);
+  background-color: rgba(255, 255, 255, .2);
+  z-index: 10;
+  h2 {
+    padding-bottom: 20px;
+  }
+}
+
+.css-modal-close {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: 1;
+  span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, .74);
+    cursor: pointer;
+    text-indent: -9999px;
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      border: 1px solid #fff;
+      height: 30px;
+    }
+    &:before {
+      left: 19px;
+      @include transform(rotate(-45deg));
+    }
+    &:after {
+      right: 19px;
+      @include transform(rotate(45deg));
     }
   }
 }
 
-#imageModal {
-  overflow: hidden;
-  margin: 1vh;
-  img {
-    height: 90vh;
-    max-width: 80vw;
-    width: auto;
-    padding: 2vh;
-    @include border-radius(5px);
-    background: #fefefe;
-    object-fit: cover;
-    -o-object-fit: cover;
-  }
+#modal-photo:target {
+  opacity: 1;
+  @include transform(translate(0, 0));
 }
 
 .map {
@@ -869,6 +889,53 @@ footer {
     .row {
       margin-left: 0;
       margin-right: 0;
+    }
+  }
+  .css-modal-img {
+    height: 60vh;
+    max-width: 80vw;
+  }
+  .modal-inner {
+    top: 10vh;
+    left: 5vw;
+    right: 5vw;
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px){
+  .modal-inner {
+    top: 10vh;
+    left: 5vw;
+    right: 5vw;
+    max-width: 80vw;
+  }
+  #photo {
+    //width: 80vw;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px){
+  .css-modal-img {
+    height: 70vh;
+    max-width: 70vw;
+  }
+  .modal-inner {
+    top: 10vh;
+    left: 5vw;
+    right: 5vw;
+    max-width: 80vw;
+  }
+}
+@media (max-width: 600px) and (orientation: portrait) {
+  #categories {
+    li {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.7rem;
+      }
     }
   }
 }

@@ -4,7 +4,7 @@
     <% var title = "КОНТУРБАЛТ" %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
@@ -140,7 +140,7 @@
     </section>
 
     <section class="container" id="reviews">
-        <div class="responsive ">
+        <div class="slider">
             <% var reviewsPhoto = ["male.png", "female.png", "male2.png", "male.png", "female.png", "male2.png"]; %>
             <% reviewsPhoto.forEach(function(item){ %>
             <div class="row">
@@ -197,15 +197,13 @@
 
         <div class="container">
 
-            <ul id="categories">
+            <ul id="categories" class="list-inline">
                 <% for (var i = 1 ; i < 24 ; i++ ){ %>
                 <li>
                     <div>
-                        <img src="img/photo/<%= i %>.jpg" alt="" width="100%"/>
-
-                        <h1>This is a title</h1>
-
-                        <p>Some sample text about the article this hexagon leads to</p>
+                        <a href="#modal-photo">
+                            <img src="img/photo/<%= i %>.jpg" alt=""/>
+                        </a>
                     </div>
                 </li>
                 <% } %>
@@ -213,7 +211,6 @@
 
         </div>
     </section>
-
     <section class="map gray" id="findUs" style="height: 100%;">
         <ul class="list-inline">
             <li class="col-xs-12 col-md-9" style="height:400px">
@@ -328,14 +325,11 @@
     </div>
 </div>
 
-<div class="modal fade text-center" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-            <img id="mimg" src="" alt="">
-        </div>
-        </div>
+<div id="modal-photo" class="css-modal">
+    <div class="modal-inner">
+        <img src="img/photo/1.jpg" alt="" id="mimg" class="css-modal-img"/>
     </div>
+    <a href="#close" class="css-modal-close"><span>close</span></a>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -346,7 +340,7 @@
 <script src="js/main.js"></script>
 <script type="text/javascript">
     $(document).ready(function (){
-        $('.responsive').slick({
+        $('.slider').slick({
             dots: true,
             infinite: true,
             speed: 300,
@@ -379,16 +373,12 @@
         DG.marker([59.941211, 30.276873]).addTo(map).bindPopup('Санкт-Петербург, В.О. 9-линия 34, БЦ «Магнус», офис 201');
     });
 
-/*    $(window).load(function (){
+    $(window).load(function (){
         $('#categories li').on('click', function (){
             var sr = $(this).find('img').attr('src');
             $('#mimg').attr('src', sr);
-            $('#imageModal').modal('show');
         });
-        $('#mimg').on('click', function(){
-            $('#imageModal').modal('hide');
-        });
-    });*/
+    });
 </script>
 </body>
 </html>
