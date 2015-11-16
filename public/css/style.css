@@ -28,7 +28,7 @@ hr {
   vertical-align: middle;
   float: none; }
 
-.btn-rectangle-lg, .btn-rectangle-sm {
+.btn-default-lg, .btn-default-sm {
   color: black;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -41,14 +41,14 @@ hr {
   -ms-transition: background 0.3s ease-in-out;
   -o-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out; }
-  .btn-rectangle-lg:hover, .btn-rectangle-sm:hover {
+  .btn-default-lg:hover, .btn-default-sm:hover {
     background-color: #e1424f;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     -ms-transition: background 0.3s ease-in-out;
     -o-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out; }
-  .btn-rectangle-lg.dark-blue:hover, .btn-rectangle-sm.dark-blue:hover {
+  .btn-default-lg.dark-blue:hover, .btn-default-sm.dark-blue:hover {
     background-color: #052e55;
     color: #fdebda; }
 
@@ -56,15 +56,53 @@ hr {
   outline: none !important; }
 
 .btn-transparent {
-  background-color: rgba(237, 237, 237, 0.2);
+  background-color: rgba(235, 235, 235, 0.6);
   border: 1px black solid;
   font-weight: bold; }
+  .btn-transparent:hover {
+    background-color: #84C512; }
 
-.btn-rectangle-lg {
+.btn-orange {
+  background-color: #EF6A21;
+  border: 1px black solid;
+  font-weight: bold; }
+  .btn-orange:hover {
+    background-color: #f0702b; }
+
+.btn-orange2 {
+  background-color: #FDBC62;
+  border: 1px black solid;
+  font-weight: bold; }
+  .btn-orange2:hover {
+    background-color: #fdb149; }
+
+.btn-green {
+  background-color: #84C512;
+  border: 1px black solid;
+  font-weight: bold; }
+  .btn-green:hover {
+    background-color: #94dc14; }
+
+.btn-blue {
+  background-color: #77B3D4;
+  border: 1px black solid;
+  font-weight: bold; }
+  .btn-blue:hover {
+    background-color: #64a8ce; }
+
+.btn-default-lg {
   padding: 15px 56px; }
 
-.btn-rectangle-sm {
+.btn-default-sm {
   padding: 7px 28px; }
+
+.btn-round {
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px; }
+
+.btn-no-border {
+  border: none; }
 
 .gray {
   background-color: #ededed; }
@@ -203,7 +241,7 @@ hr {
 -------------------------------------------------- */
 .intro {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   color: #FFC107;
   background: url(../img/intro.jpg) no-repeat 50% 55%;
   z-index: 99;

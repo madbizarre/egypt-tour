@@ -52,10 +52,23 @@
 
 <header class="intro text-center white" id="intro" role="presentation">
     <div class="container">
-        <h1 class="text-uppercase vcenter col-xs-12"><%= title %></h1>
-        <button class="btn btn-rectangle-lg btn-transparent" data-toggle="modal" data-target="#contactUsModal"
-                role="button">Свяжитесь с нами!
-        </button>
+        <h1 class="text-uppercase vcenter col-xs-12" style="padding-top: 0px;"><%= title %></h1>
+        <% var designButton = ['', 'btn-round', 'btn-no-border', 'btn-round btn-no-border']; %>
+        <% var buttons = ['btn-transparent', 'btn-orange', 'btn-orange2', 'btn-green', 'btn-blue']; %>
+        <% designButton.forEach(function(design){ %>
+
+        <ul class="list-inline">
+            <% buttons.forEach(function(item){ %>
+            <li>
+                <button class="btn btn-default-lg <%= design %> <%= item %>" data-toggle="modal"
+                        data-target="#contactUsModal"
+                        role="button" style="margin-bottom: 20px;">Свяжитесь с нами!
+                </button>
+            </li>
+            <% }); %>
+        </ul>
+        <hr/>
+        <% }); %>
     </div>
 </header>
 
@@ -197,12 +210,12 @@
 
         <div class="container">
 
-            <ul id="categories" class="list-inline">
+            <ul id="categories">
                 <% for (var i = 1 ; i < 24 ; i++ ){ %>
                 <li>
                     <div>
-                        <a href="#modal-photo">
-                            <img src="img/photo/<%= i %>.jpg" alt=""/>
+                        <a href="#modal-photo" class="text-center">
+                            <img src="img/photo/<%= i %>.jpg" alt="" class="text-center"/>
                         </a>
                     </div>
                 </li>

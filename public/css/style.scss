@@ -116,7 +116,7 @@ hr {
   float: none;
 }
 
-.btn-rectangle-lg, .btn-rectangle-sm {
+.btn-default-lg, .btn-default-sm {
   color: black;
   @include border-radius(0);
   font-family: 'Open Sans';
@@ -138,18 +138,66 @@ hr {
 }
 
 .btn-transparent {
-  background-color: rgba(237, 237, 237, 0.2);
+  background-color: rgba(235, 235, 235, 0.6);
   border: 1px black solid;
   font-weight: bold;
+  &:hover {
+    background-color: #84C512;
+  }
 }
 
-.btn-rectangle-lg {
+.btn-orange {
+  background-color: #EF6A21;
+  border: 1px black solid;
+  font-weight: bold;
+  &:hover {
+    background-color: lighten(#EF6A21, 2);
+  }
+}
+
+.btn-orange2 {
+  background-color: #FDBC62;
+  border: 1px black solid;
+  font-weight: bold;
+  &:hover {
+    background-color: darken(#FDBC62, 5);
+  }
+}
+
+.btn-green {
+  background-color: #84C512;
+  border: 1px black solid;
+  font-weight: bold;
+  &:hover {
+    background-color: lighten(#84C512, 5);
+  }
+}
+
+.btn-blue {
+  background-color: #77B3D4;
+  border: 1px black solid;
+  font-weight: bold;
+  &:hover {
+    background-color: darken(#77B3D4, 5);
+  }
+}
+
+.btn-default-lg {
   padding: 15px 56px;
 }
 
-.btn-rectangle-sm {
+.btn-default-sm {
   padding: 7px 28px;
 }
+
+.btn-round {
+  @include border-radius(60px);
+}
+
+.btn-no-border {
+  border: none;
+}
+
 
 .gray {
   background-color: #ededed;
@@ -271,7 +319,9 @@ hr {
 
 .intro {
   width: 100%;
-  height: 100vh;
+  //height: 100vh;
+  height: 100%;
+
   color: $titleColor;
   background: url(../img/intro.jpg) no-repeat 50% 55%;
   z-index: 99;
@@ -550,7 +600,6 @@ hr {
   /* RESPONSIVE */
   @media (min-width: 1201px) {
     #categories {
-      $margin: 0.5%;
       li {
         width: 19.2%; /* = (100-4) / 5 */
         padding-bottom: 22.17%; /* =  width /0.866 */
@@ -563,25 +612,25 @@ hr {
           }
         }
         &:nth-child(9n+6) {
-          margin-left: $margin/2;
+          margin-left: 0.25%;
           clear: left;
         }
         &:nth-child(9n+10) {
           clear: left;
         }
         &:nth-child(9n+2), &:nth-child(9n+ 7) {
-          margin-left: $margin;
-          margin-right: $margin;
+          margin-left: 0.5%;
+          margin-right: 0.5%;
         }
         &:nth-child(9n+3), &:nth-child(9n+4), &:nth-child(9n+8) {
-          margin-right: $margin;
+          margin-right: 0.5%;
         }
       }
     }
 
   }
 
-  @media (max-width: 1200px) and (min-width: 901px){
+  @media (max-width: 1200px) and (min-width: 901px) {
     #categories {
       li {
         width: 24.25%; /* = (100-3) / 4 */
@@ -612,7 +661,7 @@ hr {
     }
   }
 
-  @media (max-width: 900px) and (min-width: 601px){
+  @media (max-width: 900px) and (min-width: 601px) {
     #categories {
       li {
         width: 32.666%; /* = (100-2) / 3 */
@@ -903,7 +952,7 @@ footer {
   }
 }
 
-@media (min-width: 901px) and (max-width: 1200px){
+@media (min-width: 901px) and (max-width: 1200px) {
   .modal-inner {
     top: 10vh;
     left: 5vw;
@@ -915,7 +964,7 @@ footer {
   }
 }
 
-@media (min-width: 601px) and (max-width: 900px){
+@media (min-width: 601px) and (max-width: 900px) {
   .css-modal-img {
     height: 70vh;
     max-width: 70vw;
@@ -927,6 +976,7 @@ footer {
     max-width: 80vw;
   }
 }
+
 @media (max-width: 600px) and (orientation: portrait) {
   #categories {
     li {
