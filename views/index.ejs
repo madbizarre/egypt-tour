@@ -193,11 +193,11 @@
 
                     <small>Профессия</small>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ab aspernatur
+                    <p class="blockquote-reverse"><i class="fa fa-angle-double-left"></i>Ab aspernatur
                         assumenda corporis, dolorem dolores enim eum, facere fugiat labore nemo
                         praesentium reiciendis rem repellat repellendus totam. Amet commodi ipsa
-                        voluptatibus!</p>
+                        voluptatibus!<i class="fa fa-angle-double-right"></i></p>
+                    <span class="fa fa-vk fa-2x icon-review" style="float: right; padding-bottom: 2rem;"></span>
                 </div>
             </div>
             <% }); %>
@@ -212,11 +212,18 @@
 
             <ul id="categories">
                 <% for (var i = 1 ; i < 24 ; i++ ){ %>
-                <li>
-                    <div>
-                        <a href="#modal-photo" class="text-center">
-                            <img src="img/photo/<%= i %>.jpg" alt="" class="text-center"/>
-                        </a>
+                <li class="hex">
+                    <div class="hexagon-content">
+                        <img src="img/photo/<%= i %>.jpg" alt="" class="text-center"/>
+                        <h1>Страна, город</h1>
+                        <!--<p>Some sample text about the article this hexagon leads to</p>-->
+                        <ul class="list-inline">
+                            <li>
+                                <span class="fa fa-heart-o fa-2x icon-review" data-toggle="modal"
+                                      data-target="#contactUsModal" role="button"></span>
+                            </li>
+                            <li><span class="fa fa-vk fa-2x icon-review"></span></li>
+                        </ul>
                     </div>
                 </li>
                 <% } %>
@@ -330,19 +337,12 @@
                         <textarea id="inputComment" placeholder="Сообщение*" tabindex="5" required></textarea>
                     </fieldset>
                     <button type="submit" id="inputSubmit" data-loading-text="Отправляется"
-                            class="btn btn-rectangle-lg">Отправить
+                            class="btn btn-default-lg">Отправить
                     </button>
                 </form>
             </div>
         </div>
     </div>
-</div>
-
-<div id="modal-photo" class="css-modal">
-    <div class="modal-inner">
-        <img src="img/photo/1.jpg" alt="" id="mimg" class="css-modal-img"/>
-    </div>
-    <a href="#close" class="css-modal-close"><span>close</span></a>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -384,13 +384,6 @@
         DG.control.location({position: 'bottomright'}).addTo(map);
         DG.control.traffic().addTo(map);
         DG.marker([59.941211, 30.276873]).addTo(map).bindPopup('Санкт-Петербург, В.О. 9-линия 34, БЦ «Магнус», офис 201');
-    });
-
-    $(window).load(function (){
-        $('#categories li').on('click', function (){
-            var sr = $(this).find('img').attr('src');
-            $('#mimg').attr('src', sr);
-        });
     });
 </script>
 </body>
