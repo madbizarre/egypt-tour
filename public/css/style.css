@@ -949,7 +949,10 @@ footer {
     top: 10vh;
     left: 5vw;
     right: 5vw;
-    max-width: 90vw; } }
+    max-width: 90vw; }
+
+  .hexagon-content h1 {
+    font-size: 1.2rem !important; } }
 @media (min-width: 901px) and (max-width: 1200px) {
   .modal-inner {
     top: 10vh;
@@ -966,10 +969,5 @@ footer {
     left: 5vw;
     right: 5vw;
     max-width: 80vw; } }
-@media (max-width: 600px) and (orientation: portrait) {
-  #categories li h1 {
-    font-size: 1rem; }
-  #categories li p {
-    font-size: 0.7rem; } }
 
 /*# sourceMappingURL=style.css.map */
