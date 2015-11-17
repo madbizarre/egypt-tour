@@ -1018,6 +1018,11 @@ footer {
     right: 5vw;
     max-width: 90vw;
   }
+  .hexagon-content {
+    h1 {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
@@ -1039,18 +1044,5 @@ footer {
     left: 5vw;
     right: 5vw;
     max-width: 80vw;
-  }
-}
-
-@media (max-width: 600px) and (orientation: portrait) {
-  #categories {
-    li {
-      h1 {
-        font-size: 1rem;
-      }
-      p {
-        font-size: 0.7rem;
-      }
-    }
   }
 }
