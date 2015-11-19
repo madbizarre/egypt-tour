@@ -52,23 +52,11 @@
 
 <header class="intro text-center white" id="intro" role="presentation">
     <div class="container">
-        <h1 class="text-uppercase vcenter col-xs-12" style="padding-top: 0px;"><%= title %></h1>
-        <% var designButton = ['', 'btn-round', 'btn-no-border', 'btn-round btn-no-border']; %>
-        <% var buttons = ['btn-transparent', 'btn-orange', 'btn-orange2', 'btn-green', 'btn-blue']; %>
-        <% designButton.forEach(function(design){ %>
-
-        <ul class="list-inline">
-            <% buttons.forEach(function(item){ %>
-            <li>
-                <button class="btn btn-default-lg <%= design %> <%= item %>" data-toggle="modal"
-                        data-target="#contactUsModal"
-                        role="button" style="margin-bottom: 20px;">Свяжитесь с нами!
-                </button>
-            </li>
-            <% }); %>
-        </ul>
-        <hr/>
-        <% }); %>
+        <h1 class="text-uppercase vcenter col-xs-12"><%= title %></h1>
+        <button class="btn btn-default-lg btn-round btn-green" data-toggle="modal"
+                data-target="#contactUsModal"
+                role="button">Свяжитесь с нами!
+        </button>
     </div>
 </header>
 
@@ -79,71 +67,36 @@
             <h1 class="text-uppercase">Схема работы</h1>
             <hr class="subtitle-divider"/>
             <ul class="list-inline">
-                <% var schemeLiClass = "col-xs-12 col-sm-6 col-md-2" %>
-                <li class="<%= schemeLiClass %>">
-                    <img src="img/icons/choose.png" alt="">
-                    <h4>Оставляете заявку на сайте
-                        или звоните по телефону,
-                        выбираете экскурсию
-                        и определяетесь с датой</h4>
-                </li>
-                <li class="<%= schemeLiClass %>">
+                <% var schemeLiClass = "col-xs-10 col-xs-offset-1 col-sm-4  col-md-2" %>
+                <% var schemeLiClassFirst = "col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-2 col-md-offset-1" %>
+                <% var schemeLiClassLast = "col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-2 col-md-offset-0" %>
+                <li class="<%= schemeLiClassFirst %>">
                     <img src="img/icons/check.png" alt="">
                     <h4>Оставляете заявку на сайте
                         или звоните по телефону,
                         выбираете экскурсию
                         и определяетесь с датой</h4>
                 </li>
-                <li class="<%= schemeLiClass %>">
+                <li class="<%= schemeLiClass %> col-sm-offset-0">
                     <img src="img/icons/calendar.png" alt="">
                     <h4>Согласовываем с вами
                         программу экскурсии и
                         уточняем дни работы
                         объектов</h4>
                 </li>
-                <li class="<%= schemeLiClass %>">
-                    <img src="img/icons/money.png" alt="">
-                    <h4>Вы любым удобным
-                        способом оплачиваете
-                        экскурсию или квест</h4>
-                </li>
-                <li class="<%= schemeLiClass %>">
+                <li class="<%= schemeLiClass %> col-sm-offset-0">
                     <img src="img/icons/creditcard.png" alt="">
                     <h4>Вы любым удобным
                         способом оплачиваете
                         экскурсию или квест</h4>
                 </li>
-                <li class="<%= schemeLiClass %>">
-                    <img src="img/icons/document.png" alt="">
-                    <h4>Мы передаем вам
-                        необходимые документы</h4>
-                </li>
-                <hr class="divider"/>
-
-                <li class="<%= schemeLiClass %>" style="opacity: 0;">
+                <li class="<%= schemeLiClass %> col-sm-offset-2 col-md-offset-0">
                     <img src="img/icons/document2.png" alt="">
                     <h4>Мы передаем вам
                         необходимые документы</h4>
                 </li>
-                <li class="<%= schemeLiClass %>">
-                    <img src="img/icons/document2.png" alt="">
-                    <h4>Мы передаем вам
-                        необходимые документы</h4>
-                </li>
-                <li class="<%= schemeLiClass %>">
-                    <img src="img/icons/plane.png" alt="">
-                    <h4>В назначенный день
-                        подаем автобус и
-                        проводим экскурсию</h4>
-                </li>
-                <li class="<%= schemeLiClass %>">
+                <li class="<%= schemeLiClassLast %>">
                     <img src="img/icons/plane2.png" alt="">
-                    <h4>В назначенный день
-                        подаем автобус и
-                        проводим экскурсию</h4>
-                </li>
-                <li class="<%= schemeLiClass %>">
-                    <img src="img/icons/plane3.png" alt="">
                     <h4>В назначенный день
                         подаем автобус и
                         проводим экскурсию</h4>
@@ -153,40 +106,14 @@
     </section>
 
     <section class="container" id="reviews">
-        <div class="slider">
+        <h1 class="text-center text-uppercase">Отзывы наших клиентов</h1>
+        <hr class="subtitle-divider"/>
+        <div class="slider" style="padding: 0px;">
             <% var reviewsPhoto = ["male.png", "female.png", "male2.png", "male.png", "female.png", "male2.png"]; %>
             <% reviewsPhoto.forEach(function(item){ %>
-            <div class="row">
+            <div class="effect2" style="background-color: white; margin-bottom: 25px; margin-right: 25px; width: 555px;">
                 <div class="col-xs-12 col-sm-4 col-lg-3 text-center">
-                    <img style="display: inline;" src="img/characters/<%= item %>" height="128px" width="128px"/>
-                </div>
-                <div class="col-xs-12 col-sm-8 col-lg-9">
-                    <h4>Счастливый Клиент</h4>
-
-                    <small>Профессия</small>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ab aspernatur
-                        assumenda corporis, dolorem dolores enim eum, facere fugiat labore nemo
-                        praesentium reiciendis rem repellat repellendus totam. Amet commodi ipsa
-                        voluptatibus!</p>
-                </div>
-            </div>
-            <% }); %>
-        </div>
-    </section>
-
-    <section class="container" id="examples">
-        <hr class="divider"/>
-        <h1 class="text-uppercase text-center">Примеры карточек</h1>
-        <hr class="subtitle-divider"/>
-        <div class="row">
-            <% var reviewsPhoto = ["male.png", "female.png", "male2.png", "male.png", "female.png", "male2.png", "male.png", "female.png", "male2.png"]; %>
-            <% var reviewsEffect = ["effect1", "effect2", "effect3", "effect4", "effect5", "effect6", "effect7", "effect8", "effect9"]; %>
-            <% reviewsPhoto.forEach(function(item, i){ %>
-            <div class="slider-item col-sm-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-12 <%= reviewsEffect[i] %>">
-                <div class="col-xs-12 col-sm-4 col-lg-3 text-center">
-                    <img style="display: inline;" src="img/characters/<%= item %>" height="128px" width="128px"/>
+                    <img style="display: inline; margin-top: 20px;" src="img/characters/<%= item %>" height="128px" width="128px"/>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-lg-9">
                     <h4>Счастливый Клиент</h4>
@@ -215,6 +142,7 @@
                 <li class="hex">
                     <div class="hexagon-content">
                         <img src="img/photo/<%= i %>.jpg" alt="" class="text-center"/>
+
                         <h1>Страна, город</h1>
                         <!--<p>Some sample text about the article this hexagon leads to</p>-->
                         <ul class="list-inline">
@@ -355,15 +283,16 @@
     $(document).ready(function (){
         $('.slider').slick({
             dots: true,
+            arrows: false,
             infinite: true,
-            speed: 300,
+            speed: 500,
             slidesToShow: 2,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 5000,
             responsive: [
                 {
-                    breakpoint: 767,
+                    breakpoint: 992,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
