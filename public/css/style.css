@@ -582,7 +582,7 @@ hr {
     overflow: hidden;
     padding: 0;
     margin: 0 auto; }
-    #photo #categories .hexagon-content h1, #photo #categories .hexagon-content ul {
+    #photo #categories .hexagon-content h4, #photo #categories .hexagon-content ul {
       width: 90%;
       background-color: #00B02D;
       background-color: rgba(0, 176, 45, 0.8);
@@ -592,9 +592,9 @@ hr {
       -ms-transition: all 0.2s ease-out;
       -o-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out; }
-      #photo #categories .hexagon-content h1:focus, #photo #categories .hexagon-content h1:active, #photo #categories .hexagon-content ul:focus, #photo #categories .hexagon-content ul:active {
+      #photo #categories .hexagon-content h4:focus, #photo #categories .hexagon-content h4:active, #photo #categories .hexagon-content ul:focus, #photo #categories .hexagon-content ul:active {
         outline: none !important; }
-    #photo #categories .hexagon-content h1 {
+    #photo #categories .hexagon-content h4 {
       margin: 0; }
     #photo #categories .hexagon-content ul {
       margin-left: 0;
@@ -639,14 +639,14 @@ hr {
         object-fit: cover;
         -o-object-fit: cover;
         margin: 0 auto; }
-      #photo #categories .hex h1 {
+      #photo #categories .hex h4 {
         bottom: 110%;
         font-style: italic;
         font-weight: normal;
         font-size: 1.5em;
         padding-top: 100%;
         padding-bottom: 100%; }
-        #photo #categories .hex h1:after {
+        #photo #categories .hex h4:after {
           content: '';
           display: block;
           position: absolute;
@@ -660,7 +660,7 @@ hr {
         padding-top: 50%;
         top: 110%;
         padding-bottom: 50%; }
-      #photo #categories .hex .hexagon-content:hover h1 {
+      #photo #categories .hex .hexagon-content:hover h4 {
         bottom: 50%;
         padding-bottom: 10%;
         will-change: bottom; }
@@ -880,6 +880,8 @@ hr {
     margin-bottom: 0; }
   .map .map-marker {
     margin-top: 100px; }
+  .map img {
+    width: 100%; }
 
 /* FOOTER
 -------------------------------------------------- */
@@ -1004,7 +1006,7 @@ footer {
     right: 5vw;
     max-width: 90vw; }
 
-  .hexagon-content h1 {
+  .hexagon-content h4 {
     font-size: 1.2rem !important; } }
 @media (min-width: 901px) and (max-width: 1200px) {
   .modal-inner {

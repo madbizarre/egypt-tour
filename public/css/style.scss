@@ -627,7 +627,7 @@ hr {
     padding: 0;
     margin: 0 auto;
     .hexagon-content {
-      h1, ul {
+      h4, ul {
         width: 90%;
         background-color: #00B02D;
         background-color: rgba(0, 176, 45, 0.8);
@@ -637,7 +637,7 @@ hr {
           outline: none !important;
         }
       }
-      h1 {
+      h4 {
         margin: 0;
       }
       ul {
@@ -683,7 +683,7 @@ hr {
         margin: 0 auto;
       }
 
-      h1 {
+      h4 {
         bottom: 110%;
         font-style: italic;
         font-weight: normal;
@@ -710,7 +710,7 @@ hr {
       }
 
       .hexagon-content:hover {
-        h1 {
+        h4 {
           bottom: 50%;
           padding-bottom: 10%;
           will-change: bottom;
@@ -840,7 +840,6 @@ hr {
       }
     }
   }
-
 }
 
 .css-modal-img {
@@ -939,6 +938,9 @@ hr {
   }
   .map-marker {
     margin-top: 100px;
+  }
+  img {
+    width: 100%;
   }
 }
 
@@ -1082,7 +1084,7 @@ footer {
     max-width: 90vw;
   }
   .hexagon-content {
-    h1 {
+    h4 {
       font-size: 1.2rem!important;
     }
   }

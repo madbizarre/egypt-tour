@@ -62,7 +62,7 @@
     </div>
 </header>
 
-<main role="main">
+<main>
 
     <section class="white" id="work">
         <div class="container text-center">
@@ -107,7 +107,7 @@
             <% reviewsPhoto.forEach(function(item){ %>
             <div class="effect2" style="background-color: white; margin-bottom: 25px; margin-right: 25px; width: 555px;">
                 <div class="col-xs-12 col-sm-4 col-lg-3 text-center">
-                    <img style="display: inline; margin-top: 20px;" src="img/characters/<%= item %>" height="128px" width="128px"/>
+                    <img style="display: inline; margin-top: 20px;" src="img/characters/<%= item %>" height="128" width="128" alt="Клиент"/>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-lg-9">
                     <h4>Счастливый Клиент</h4>
@@ -137,7 +137,7 @@
                     <div class="hexagon-content">
                         <img src="img/photo/<%= i %>.jpg" alt="" class="text-center"/>
 
-                        <h1>Страна, город</h1>
+                        <h4>Страна, город</h4>
                         <!--<p>Some sample text about the article this hexagon leads to</p>-->
                         <ul class="list-inline">
                             <li>
@@ -160,7 +160,7 @@
             </li>
             <li class="col-xs-12 col-md-3 text-center">
                 <div class="col-xs-8 col-xs-offset-2 col-md-10 col-md-offset-1">
-                    <img src="img/logo.png" alt="Контурбалт" width="100%">
+                    <img src="img/logo.png" alt="Контурбалт">
                 </div>
                 <div class="col-xs-12">
                     <h1><%= title %></h1>
@@ -216,12 +216,12 @@
                 <ul class="list-inline footer-social-list">
                     <li>
                         <a href="https://vk.com/">
-                            <img src="img/social-icons/vk.png" alt="Вконтакте" height="50px"/>
+                            <img src="img/social-icons/vk.png" alt="Вконтакте" height="50"/>
                         </a>
                     </li>
                     <li>
                         <a href="http://facebook.com/">
-                            <img src="img/social-icons/facebook.png" alt="Facebook" height="50px"/>
+                            <img src="img/social-icons/facebook.png" alt="Facebook" height="50"/>
                         </a>
                     </li>
                 </ul>
@@ -240,7 +240,7 @@
                 <h4 class="modal-title text-center contact-title">Оставьте заявку</h4>
             </div>
             <div class="modal-body text-center">
-                <form id="contact" action="" method="post">
+                <form id="contact" action="#" method="post">
                     <fieldset>
                         <label for="inputName"></label>
                         <input type="text" id="inputName" placeholder="Имя*" tabindex="1" autofocus required/>
@@ -259,7 +259,7 @@
                         <textarea id="inputComment" placeholder="Сообщение*" tabindex="5" required></textarea>
                     </fieldset>
                     <button class="btn btn-default-lg btn-round btn-green btn-no-border" type="submit" id="inputSubmit"
-                            data-loading-text="Отправляется" role="button">Отправить
+                            data-loading-text="Отправляется">Отправить
                     </button>
                 </form>
             </div>
