@@ -18,7 +18,7 @@ Vk: ${req.body.vk || 'не указан'}
   transporter.sendMail({
     from: `${mail.from} <${mail.user}>`,
     to: mail.to,
-    subject: `Заявка с сайта: ${req.hostname}`,
+    subject: mail.from,
     text: text
   }, function (err){
     if (err) return next(err);

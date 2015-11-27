@@ -241,10 +241,14 @@ hr {
 
 /* INTRO
 -------------------------------------------------- */
+#sletat-search-1 {
+  margin: 0 auto; }
+
 .intro {
   width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
+  height: 100%;
+  padding: 24px;
+  overflow: hidden;
   color: #FFC107;
   background: url(../img/intro.jpg) no-repeat 50% 55%;
   z-index: 99;
@@ -252,6 +256,16 @@ hr {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  .intro .container {
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
+  .intro .col-xs-12 img {
+    max-width: 100%; }
+  .intro .btn {
+    max-width: 100%;
+    margin-bottom: 20px; }
   .intro .ribbon-banner {
     display: table;
     max-width: 85%;
@@ -262,7 +276,7 @@ hr {
     position: relative;
     color: #fff;
     text-align: center;
-    margin: 30vh auto 1.25em;
+    margin: 40px auto 1.25em;
     text-shadow: 0 1px 3px #dc6b21;
     z-index: 99;
     -webkit-transform: skew(-5deg, -5deg);

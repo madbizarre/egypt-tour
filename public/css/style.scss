@@ -324,14 +324,32 @@ hr {
 /* INTRO
 -------------------------------------------------- */
 
+#sletat-search-1 {
+  margin: 0 auto;
+}
+
 .intro {
   width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
+  height: 100%;
+  padding: 24px;
+  overflow: hidden;
   color: $titleColor;
   background: url(../img/intro.jpg) no-repeat 50% 55%;
   z-index: 99;
   @include background-size(cover);
+
+  .container {
+    background: rgba(0, 0, 0, 0.5);
+    @include border-radius(10px);
+  }
+
+  .col-xs-12 img {
+    max-width: 100%;
+  }
+  .btn {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 
   $rear-x-offset: 1em;
   $ribbon-color: #e38242;
@@ -346,7 +364,7 @@ hr {
     position: relative;
     color: #fff;
     text-align: center;
-    margin: 30vh auto 1.25em;
+    margin: 40px auto 1.25em;
     text-shadow: 0 1px 3px darken($ribbon-color, 8%);
     z-index: 99;
     @include transform(skew(-5deg, -5deg));
