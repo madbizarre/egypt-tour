@@ -250,7 +250,7 @@ hr {
   padding: 24px;
   overflow: hidden;
   color: #FFC107;
-  background: url(../img/intro.jpg) no-repeat 50% 55%;
+  background: url(../img/intro.jpg) no-repeat 50% 50%;
   z-index: 99;
   -webkit-background-size: cover;
   -moz-background-size: cover;
