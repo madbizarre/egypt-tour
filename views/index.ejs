@@ -63,7 +63,7 @@
                 customStyles: "#search-form .column-wrapper { background: transparent; box-shadow: none; border: none;" +
                 " } #search-form p { color: white; } #submit-decor { text-align: left !important; }" +
                 "#sletat-search-1 { min-width: 100% !important; }" +
-                "@media (max-width: 768px) { body { max-width: 250px } .type-horizontal .column" +
+                "@media (max-width: 768px) { body { max-width: 250px !important;} .type-horizontal .column" +
                 "-left, .type-horizontal .column-right { width: 100% !important; margin: 0 auto; " +
                 "} #frame-main .column-left .decor, #frame-main .column-right .decor { margin: 0;" +
                 " } #frame-main .decor, #search-form .column-right .decor { padding: 0; } #frame-" +
@@ -85,24 +85,14 @@
         <script type="text/javascript">
             var defaultToursCount = 8;
             var mw767 = window.matchMedia( "(max-width: 767px)" );
-            if (mw767.matches) {
-                /*sletat.FrameHot.$create({
-                    city: 1264,
-                    toursCount: 4,
-                    useCard: false,
-                    customStyles: ".wrapper form { padding: 5px 10px 2px;" +
-                    " border-radius: 5px;} .wrapper form label>span { color: white}"
-                });*/
-            } else {
+            if (!mw767.matches) {
                 sletat.FrameHot.$create({
                     city: 1264,
                     toursCount: 8,
                     useCard: false,
-                    customStyles: ".wrapper form { padding: 5px 10px 2px;" +
-                    " border-radius: 5px;} .wrapper form label>span { color: white}"
+                    customStyles: ".wrapper form { padding: 5px 10px 2px; border-radius: 5px;} .wrapper form label>span { color: white}"
                 });
             }
-
         </script>
         <span class="sletat-copyright">Идет загрузка модуля <a href="http://sletat.ru/" title="поиск туров"
                                                                target="_blank">поиска туров</a> &hellip;</span>
