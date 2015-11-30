@@ -250,7 +250,7 @@ hr {
   padding: 24px;
   overflow: hidden;
   color: #FFC107;
-  background: url(../img/intro.jpg) no-repeat 50% 50%;
+  background: url(../img/intro2.jpg) no-repeat 50% 50%;
   z-index: 99;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -266,60 +266,6 @@ hr {
   .intro .btn {
     max-width: 100%;
     margin-bottom: 20px; }
-  .intro .ribbon-banner {
-    display: table;
-    max-width: 85%;
-    font-size: 2.5em;
-    font-family: 'Arvo', serif;
-    font-weight: bold;
-    line-height: 1.1;
-    position: relative;
-    color: #fff;
-    text-align: center;
-    margin: 40px auto 1.25em;
-    text-shadow: 0 1px 3px #dc6b21;
-    z-index: 99;
-    -webkit-transform: skew(-5deg, -5deg);
-    -moz-transform: skew(-5deg, -5deg);
-    -ms-transform: skew(-5deg, -5deg);
-    -o-transform: skew(-5deg, -5deg);
-    transform: skew(-5deg, -5deg); }
-    .intro .ribbon-banner:before, .intro .ribbon-banner:after {
-      content: "";
-      position: absolute;
-      display: block;
-      bottom: -.7em;
-      border-width: .85em;
-      border-style: solid;
-      border-color: #c67139;
-      z-index: -1; }
-    .intro .ribbon-banner:before {
-      left: -1.5em;
-      border-right-width: 1.5em;
-      border-left-width: 1em;
-      border-left-color: transparent; }
-    .intro .ribbon-banner:after {
-      right: -1.5em;
-      border-left-width: 1.5em;
-      border-right-width: 1em;
-      border-right-color: transparent; }
-    .intro .ribbon-banner span {
-      padding: .3em 1em .3em;
-      background: #e38242;
-      background: linear-gradient(to top, #e38242, #c67139); }
-      .intro .ribbon-banner span:before, .intro .ribbon-banner span:after {
-        content: "";
-        position: absolute;
-        display: block;
-        border-style: solid;
-        border-color: #8c5f41 transparent transparent transparent;
-        bottom: -.7em; }
-      .intro .ribbon-banner span:before {
-        left: 0;
-        border-width: 0.35em 0 0 1em; }
-      .intro .ribbon-banner span:after {
-        right: 0;
-        border-width: 0.35em 1em 0 0; }
 
 /* MAIN CONTENT
 -------------------------------------------------- */
@@ -840,7 +786,10 @@ footer {
     max-width: 90vw; }
 
   .hexagon-content h4 {
-    font-size: 1.2rem !important; } }
+    font-size: 1.2rem !important; }
+
+  .mobile-sletat {
+    min-width: 100% !important; } }
 @media (min-width: 901px) and (max-width: 1200px) {
   .modal-inner {
     top: 10vh;

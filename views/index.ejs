@@ -61,16 +61,15 @@
                 formType: "horizontal",
                 useCard: false,
                 customStyles: "#search-form .column-wrapper { background: transparent; box-shadow: none; border: none;" +
-                " } #search-form p { color: white; } button#submit { padding: 12px 24px; border-r" +
-                "adius: 50px; background: #84C512; text-shadow: none; border: none; font-family: " +
-                "'Open Sans'; font-size: medium; -webkit-transition: background 0.3s ease-in-out;" +
-                " -moz-transition: background 0.3s ease-in-out; -ms-transition: background 0.3s e" +
-                "ase-in-out; -o-transition: background 0.3s ease-in-out; transition: background 0" +
-                ".3s ease-in-out; } button#submit:focus, button#submit:active { outline: none !im" +
-                "portant; } button#submit:hover { -webkit-transition: background 0.3s ease-in-out" +
-                "; -moz-transition: background 0.3s ease-in-out; -ms-transition: background 0.3s " +
-                "ease-in-out; -o-transition: background 0.3s ease-in-out; transition: background " +
-                "0.3s ease-in-out; background-color: #94dc14; }"
+                " } #search-form p { color: white; } #submit-decor { text-align: left !important; }" +
+                "#sletat-search-1 { min-width: 100% !important; }" +
+                "@media (max-width: 768px) { .type-horizontal .column" +
+                "-left, .type-horizontal .column-right { width: 100% !important; margin: 0 auto; " +
+                "} #frame-main .column-left .decor, #frame-main .column-right .decor { margin: 0;" +
+                " } #frame-main .decor, #search-form .column-right .decor { padding: 0; } #frame-" +
+                "main .search-tour { padding: 0; margin-top: 0; } #frame-main .cell-left { width:" +
+                " 100% !important; } #frame-main .cell-right { width: 100% !important; margin: 0;" +
+                " } #frame-main {overflow-x: auto;} }"
             });</script>
         <span class="sletat-copyright">Идет загрузка модуля <a href="http://sletat.ru/" title="поиск туров"
                                                                target="_blank">поиска туров</a> &hellip;</span>
@@ -83,20 +82,51 @@
                 data-target="#contactUsModal">Свяжитесь с нами!
         </button>
 
-        <script type="text/javascript" src="//ui.sletat.ru/module-4.0/core.js" charset="utf-8"></script>
-        <script type="text/javascript">sletat.FrameHot.$create({
-                city: 1264,
-                toursCount: 8,
-                useCard: false,
-                customStyles: ".wrapper form { padding: 5px 10px 2px;" +
-                " border-radius: 5px;} .wrapper form label>span { color: white}"
-            });</script>
+        <script type="text/javascript">
+            var defaultToursCount = 8;
+            var mw767 = window.matchMedia( "(max-width: 767px)" );
+            if (mw767.matches) {
+                /*sletat.FrameHot.$create({
+                    city: 1264,
+                    toursCount: 4,
+                    useCard: false,
+                    customStyles: ".wrapper form { padding: 5px 10px 2px;" +
+                    " border-radius: 5px;} .wrapper form label>span { color: white}"
+                });*/
+            } else {
+                sletat.FrameHot.$create({
+                    city: 1264,
+                    toursCount: 8,
+                    useCard: false,
+                    customStyles: ".wrapper form { padding: 5px 10px 2px;" +
+                    " border-radius: 5px;} .wrapper form label>span { color: white}"
+                });
+            }
+
+        </script>
         <span class="sletat-copyright">Идет загрузка модуля <a href="http://sletat.ru/" title="поиск туров"
                                                                target="_blank">поиска туров</a> &hellip;</span>
     </div>
 </header>
 
 <main>
+    <section class="gray hidden-lg hidden-md hidden-sm">
+        <div class="container">
+            <script>
+                var mw767 = window.matchMedia( "(max-width: 767px)" );
+                if (mw767.matches) {
+                    sletat.FrameHot.$create({
+                        city: 1264,
+                        toursCount: 4,
+                        useCard: false,
+                        customStyles: ".wrapper form { padding: 5px 10px 2px;" +
+                        " border-radius: 5px;} #container { min-width: 100% !important}" +
+                        ".blockCont .block { display: block; margin: 0 auto 20px;} #hot-town-from, #hot-direction {display:block;margin: 0 auto 10px;}"
+                    });
+                }
+            </script>
+        </div>
+    </section>
 
     <section class="white" id="work">
         <div class="container text-center">
@@ -268,17 +298,9 @@
                         <input type="text" id="inputName" placeholder="Имя*" tabindex="1" autofocus required/>
                     </fieldset>
                     <fieldset>
-                        <label for="inputEmail"></label>
-                        <input type="email" id="inputEmail" placeholder="Email" tabindex="2"/>
-                    </fieldset>
-                    <fieldset>
                         <label for="inputTel"></label>
                         <input type="tel" id="inputTel" placeholder="Телефон*" tabindex="4"
                                pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required/>
-                    </fieldset>
-                    <fieldset>
-                        <label for="inputComment"></label>
-                        <textarea id="inputComment" placeholder="Сообщение*" tabindex="5" required></textarea>
                     </fieldset>
                     <button class="btn btn-default-lg btn-round btn-green btn-no-border" type="submit" id="inputSubmit"
                             data-loading-text="Отправляется">Отправить
@@ -316,6 +338,13 @@
                 }
             ]
         });
+
+        var mw767 = window.matchMedia( "(max-width: 767px)" );
+        if (mw767.matches) {
+            $('#sletat-search-1').css({'min-width': '100%'});
+            $('#sletat-frame-2').css({'min-width': '100%'});
+            $('#frame-main').css({'overflow-x': 'auto'});
+        }
     });
 
     var map;
