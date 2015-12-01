@@ -108,7 +108,7 @@ main {
 }
 
 section {
-  padding: 50px 0;
+  padding: 25px 0;
   h1 {
     padding-bottom: 0;
   }
@@ -345,8 +345,9 @@ hr {
     @include border-radius(10px);
   }
 
-  .col-xs-12 img {
+  .logo {
     max-width: 100%;
+    margin-bottom: 10px;
   }
   .btn {
     max-width: 100%;
@@ -887,11 +888,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .intro {
-    .ribbon-banner {
-      font-size: 2.65rem;
-    }
-  }
   .css-modal-img {
     height: 60vh;
     max-width: 80vw;

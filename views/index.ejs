@@ -54,7 +54,10 @@
     <div class="container">
 
         <script type="text/javascript" src="//ui.sletat.ru/module-4.0/core.js" charset="utf-8"></script>
-        <script type="text/javascript">sletat.FrameSearch.$create({
+        <script type="text/javascript">
+            var maxWidth = screen.width > screen.height ? screen.height : screen.width;
+            maxWidth -= 78;
+            sletat.FrameSearch.$create({
                 city: 1264,
                 country: 113,
                 namespace: "macstyle",
@@ -63,7 +66,7 @@
                 customStyles: "#search-form .column-wrapper { background: transparent; box-shadow: none; border: none;" +
                 " } #search-form p { color: white; } #submit-decor { text-align: left !important; }" +
                 "#sletat-search-1 { min-width: 100% !important; }" +
-                "@media (max-width: 768px) { body { max-width: 250px !important;} .type-horizontal .column" +
+                "@media (max-width: 768px) { body { max-width: "+maxWidth+"px !important;} .type-horizontal .column" +
                 "-left, .type-horizontal .column-right { width: 100% !important; margin: 0 auto; " +
                 "} #frame-main .column-left .decor, #frame-main .column-right .decor { margin: 0;" +
                 " } #frame-main .decor, #search-form .column-right .decor { padding: 0; } #frame-" +
@@ -75,7 +78,7 @@
                                                                target="_blank">поиска туров</a> &hellip;</span>
 
         <div class="col-xs-12">
-            <img src="img/logo.png" alt="Контурбалт">
+            <img src="img/logo.png" alt="Контурбалт" class="logo">
         </div>
 
         <button class="btn btn-default-lg btn-round btn-green btn-no-border" data-toggle="modal"
@@ -84,7 +87,7 @@
 
         <script type="text/javascript">
             var defaultToursCount = 8;
-            var mw767 = window.matchMedia( "(max-width: 767px)" );
+            var mw767 = window.matchMedia("(max-width: 767px)");
             if (!mw767.matches) {
                 sletat.FrameHot.$create({
                     city: 1264,
@@ -103,7 +106,7 @@
     <section class="gray hidden-lg hidden-md hidden-sm">
         <div class="container">
             <script>
-                var mw767 = window.matchMedia( "(max-width: 767px)" );
+                var mw767 = window.matchMedia("(max-width: 767px)");
                 if (mw767.matches) {
                     sletat.FrameHot.$create({
                         city: 1264,
@@ -156,19 +159,23 @@
     <section class="container" id="reviews">
         <h1 class="text-center text-uppercase">Отзывы наших клиентов</h1>
         <hr class="subtitle-divider"/>
-        <div class="slider"><% sendReviews.forEach(function(item){ %>
+        <div class="slider">
+            <% sendReviews.forEach(function(item){ %>
             <div class="review-card">
                 <div class="col-xs-12 col-sm-4 col-lg-3 text-center">
                     <img src="<%= item.img %>" height="128" width="128" alt="Клиент"/>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-lg-9">
                     <h4 class="text-center"><%= item.name %></h4>
+
                     <p class="blockquote-reverse"><i class="fa fa-angle-double-left"></i>
                         <%= item.comment %>
                         <i class="fa fa-angle-double-right"></i></p>
-                    <a href="<%= item.url %>" target="_blank"><span class="fa fa-vk fa-2x icon-review" style="float: right; padding-bottom: 2rem;"></span></a>
+                    <a href="<%= item.url %>" target="_blank"><span class="fa fa-vk fa-2x icon-review"
+                                                                    style="float: right; padding-bottom: 2rem;"></span></a>
                 </div>
-            </div><% }); %>
+            </div>
+            <% }); %>
         </div>
     </section>
 
@@ -178,7 +185,8 @@
 
         <div class="container">
 
-            <ul id="categories"><% sendPhotos.forEach(function(item){ %>
+            <ul id="categories">
+                <% sendPhotos.forEach(function(item){ %>
                 <li class="hex">
                     <div class="hexagon-content">
                         <img src="img/photo/<%= item.id %>.jpg" alt="" class="text-center"/>
@@ -189,10 +197,12 @@
                                 <span class="fa fa-heart-o fa-2x icon-review" data-toggle="modal"
                                       data-target="#contactUsModal" role="button"></span>
                             </li>
-                            <li><a href="<%= item.url %>" target="_blank"><span class="fa fa-vk fa-2x icon-review"></span></a></li>
+                            <li><a href="<%= item.url %>" target="_blank"><span
+                                            class="fa fa-vk fa-2x icon-review"></span></a></li>
                         </ul>
                     </div>
-                </li><% }); %>
+                </li>
+                <% }); %>
             </ul>
 
         </div>
@@ -329,11 +339,15 @@
             ]
         });
 
-        var mw767 = window.matchMedia( "(max-width: 767px)" );
+        var mw767 = window.matchMedia("(max-width: 767px)");
         if (mw767.matches) {
-            $('#sletat-search-1').css({'min-width': '100%'});
-            $('#sletat-frame-2').css({'min-width': '100%'});
-            $('#frame-main').css({'overflow-x': 'auto'});
+            $('iframe#sletat-search-1').bind('load', function (){
+                $('#sletat-search-1').css('min-width', '100%');
+            });
+            $('#sletat-search-2').bind('load', function (){
+                $('#sletat-frame-2').css({'min-width': '100%'});
+                $('#frame-main').css({'overflow-x': 'auto'});
+            });
         }
     });
 
