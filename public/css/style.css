@@ -285,9 +285,6 @@ hr {
   border-top: 1px solid #DDDDDD;
   padding-bottom: 25px; }
 
-#work li {
-  height: 250px; }
-
 #reviews {
   overflow: hidden; }
 
@@ -334,9 +331,13 @@ hr {
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: top;
+    -webkit-object-position: top;
     object-position: top;
     display: inline;
-    margin-top: 20px; }
+    margin-top: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
 
 .blockquote-reverse {
   font-size: medium; }
@@ -792,7 +793,10 @@ footer {
     font-size: 1.2rem !important; }
 
   .mobile-sletat {
-    min-width: 100% !important; } }
+    min-width: 100% !important; }
+
+  #work li {
+    margin-bottom: 50px; } }
 @media (min-width: 901px) and (max-width: 1200px) {
   .modal-inner {
     top: 10vh;
