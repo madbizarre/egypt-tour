@@ -52,31 +52,31 @@
 
 <header class="intro text-center white" id="intro" role="presentation">
     <div class="container">
-
-        <script type="text/javascript" src="//ui.sletat.ru/module-4.0/core.js" charset="utf-8"></script>
-        <script type="text/javascript">
-            var maxWidth = screen.width > screen.height ? screen.height : screen.width;
-            maxWidth -= 78;
-            sletat.FrameSearch.$create({
-                city: 1264,
-                country: 113,
-                namespace: "macstyle",
-                formType: "horizontal",
-                useCard: false,
-                customStyles: "#search-form .column-wrapper { background: transparent; box-shadow: none; border: none;" +
-                " } #search-form p { color: white; } #submit-decor { text-align: left !important; }" +
-                "#sletat-search-1 { min-width: 100% !important; }" +
-                "@media (max-width: 768px) { body { max-width: "+maxWidth+"px !important;} .type-horizontal .column" +
-                "-left, .type-horizontal .column-right { width: 100% !important; margin: 0 auto; " +
-                "} #frame-main .column-left .decor, #frame-main .column-right .decor { margin: 0;" +
-                " } #frame-main .decor, #search-form .column-right .decor { padding: 0; } #frame-" +
-                "main .search-tour { padding: 0; margin-top: 0; } #frame-main .cell-left { width:" +
-                " 100% !important; } #frame-main .cell-right { width: 100% !important; margin: 0;" +
-                " } #frame-main {overflow-x: auto;} }"
-            });</script>
-        <span class="sletat-copyright">Идет загрузка модуля <a href="http://sletat.ru/" title="поиск туров"
+        <section id="searchTours">
+            <script type="text/javascript" src="//ui.sletat.ru/module-4.0/core.js" charset="utf-8"></script>
+            <script type="text/javascript">
+                var maxWidth = screen.width > screen.height ? screen.height : screen.width;
+                maxWidth -= 78;
+                sletat.FrameSearch.$create({
+                    city: 1264,
+                    country: 113,
+                    namespace: "macstyle",
+                    formType: "horizontal",
+                    useCard: false,
+                    customStyles: "#search-form .column-wrapper { background: transparent; box-shadow: none; border: none;" +
+                    " } #search-form p { color: white; } #submit-decor { text-align: center !important; }" +
+                    "#sletat-search-1 { min-width: 100% !important; }" +
+                    "@media (max-width: 768px) { body { max-width: " + maxWidth + "px !important;} .type-horizontal .column" +
+                    "-left, .type-horizontal .column-right { width: 100% !important; margin: 0 auto; " +
+                    "} #frame-main .column-left .decor, #frame-main .column-right .decor { margin: 0;" +
+                    " } #frame-main .decor, #search-form .column-right .decor { padding: 0; } #frame-" +
+                    "main .search-tour { padding: 0; margin-top: 0; } #frame-main .cell-left { width:" +
+                    " 100% !important; } #frame-main .cell-right { width: 100% !important; margin: 0;" +
+                    " } #frame-main {overflow-x: auto;} }"
+                });</script>
+            <span class="sletat-copyright">Идет загрузка модуля <a href="http://sletat.ru/" title="поиск туров"
                                                                target="_blank">поиска туров</a> &hellip;</span>
-
+        </section>
         <div class="col-xs-12">
             <img src="img/logo.png" alt="Контурбалт" class="logo">
         </div>
@@ -84,42 +84,22 @@
         <button class="btn btn-default-lg btn-round btn-green btn-no-border" data-toggle="modal"
                 data-target="#contactUsModal">Свяжитесь с нами!
         </button>
-
-        <script type="text/javascript">
-            var defaultToursCount = 8;
-            var mw767 = window.matchMedia("(max-width: 767px)");
-            if (!mw767.matches) {
-                sletat.FrameHot.$create({
-                    city: 1264,
-                    toursCount: 8,
-                    useCard: false,
-                    customStyles: ".wrapper form { padding: 5px 10px 2px; border-radius: 5px;} .wrapper form label>span { color: white}"
-                });
-            }
-        </script>
-        <span class="sletat-copyright">Идет загрузка модуля <a href="http://sletat.ru/" title="поиск туров"
-                                                               target="_blank">поиска туров</a> &hellip;</span>
+        <section id="hotToursLight">
+            <script src="http://ui.sletat.ru/client/linker_hot.js?settings={formViewMode:'block'}&sfx=_4iutv"
+                    type="text/javascript"></script>
+            <iframe id="sm2_slySearch_4iutv"
+                    src="http://ui.sletat.ru/HotForm.html?sfx=_4iutv&fbg=ffffff&mbg=-1&bbg=-1&bbd=eeeeee&cbd=abadb3&c1=222222&c2=838383&c3=9d1414&c4=ededed&style=.sqrd.country%20span%23main%7Bfont-weight%3A%20normal%20!important%3B%7D.sqrd.country%20span%23main%7Bfont-style%3A%20italic%20!important%3B%7D.sqrd.country%7B-moz-border-radius%3A5px%20!important%3Bborder-radius%3A%205px%20!important%3B%7D.sqrd.country%20span%23main%7Bfont-family%3A%20Verdana%2C%20Geneva%2C%20sans-serif%20!important%3B%7D&currency=RUB&tpl=sqrd&dptCity=832&country=40&countriesAmount=6&noMoreCountries=0&stpl=%D0%93%D0%BE%D1%80%D1%8F%D1%89%D0%B8%D0%B5%20%D1%82%D1%83%D1%80%D1%8B%20(%D0%A1%D0%9F%D0%B1)&settings={'plugins':[]}"
+                    style="margin: 0 auto; background:url('http://ui.sletat.ru/gfx/ld3.gif') no-repeat center center;"
+                    width="591" height="487" frameborder="0" scrolling="no"></iframe>
+            <iframe allowtransparency="true" onload="sm2_sly_4iutv.init()" id="sm2_slyResult_4iutv"
+                    src="http://ui.sletat.ru/HotResult.html?sfx=_4iutv&fbg=ffffff&mbg=-1&bbg=-1&bbd=eeeeee&cbd=abadb3&c1=222222&c2=838383&c3=9d1414&c4=ededed&style=.sqrd.country%20span%23main%7Bfont-weight%3A%20normal%20!important%3B%7D.sqrd.country%20span%23main%7Bfont-style%3A%20italic%20!important%3B%7D.sqrd.country%7B-moz-border-radius%3A5px%20!important%3Bborder-radius%3A%205px%20!important%3B%7D.sqrd.country%20span%23main%7Bfont-family%3A%20Verdana%2C%20Geneva%2C%20sans-serif%20!important%3B%7D&tpl=sqrd&currency=RUB&rc=5&stpl=%D0%93%D0%BE%D1%80%D1%8F%D1%89%D0%B8%D0%B5%20%D1%82%D1%83%D1%80%D1%8B%20(%D0%A1%D0%9F%D0%B1)&settings={'plugins':['squared_output']}"
+                    height="320" width="645" frameborder="0" style="display:none" scrolling="no"></iframe>
+        </section>
     </div>
 </header>
 
 <main>
-    <section class="gray hidden-lg hidden-md hidden-sm">
-        <div class="container">
-            <script>
-                var mw767 = window.matchMedia("(max-width: 767px)");
-                if (mw767.matches) {
-                    sletat.FrameHot.$create({
-                        city: 1264,
-                        toursCount: 4,
-                        useCard: false,
-                        customStyles: ".wrapper form { padding: 5px 10px 2px;" +
-                        " border-radius: 5px;} #container { min-width: 100% !important}" +
-                        ".blockCont .block { display: block; margin: 0 auto 20px;} #hot-town-from, #hot-direction {display:block;margin: 0 auto 10px;}"
-                    });
-                }
-            </script>
-        </div>
-    </section>
+
 
     <section class="white" id="work">
         <div class="container text-center">
@@ -348,6 +328,9 @@
                 $('#sletat-frame-2').css({'min-width': '100%'});
                 $('#frame-main').css({'overflow-x': 'auto'});
             });
+            var $hotToursLight = $('#hotToursLight');
+            $hotToursLight.prependTo('main');
+            $hotToursLight.addClass('gray');
         }
     });
 
