@@ -1,5 +1,52 @@
 ;(function (){
+    var map;
+
+    DG.then(function (){
+        map = DG.map('map', {
+            center: [59.941211, 30.276873],
+            zoom: 16,
+            scrollWheelZoom: false
+        });
+        DG.control.location({position: 'bottomright'}).addTo(map);
+        DG.control.traffic().addTo(map);
+        DG.marker([59.941211, 30.276873]).addTo(map).bindPopup('Санкт-Петербург, В.О. 9-линия 34, БЦ «Магнус», офис 201');
+    });
+
     $(document).ready(function (){
+        $('.slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        var mw767 = window.matchMedia("(max-width: 767px)");
+        if (mw767.matches) {
+            $('iframe#sletat-search-1').bind('load', function (){
+                $('#sletat-search-1').css('min-width', '100%');
+            });
+            $('#sletat-search-2').bind('load', function (){
+                $('#sletat-frame-2').css({'min-width': '100%'});
+                $('#frame-main').css({'overflow-x': 'auto'});
+            });
+            var $hotToursLight = $('#hotToursLight');
+            $hotToursLight.prependTo('main');
+            $hotToursLight.addClass('white');
+        }
+
         var $btnSubmit = $('button[type=submit]'),
             $contact = $('#contact'),
             $contactTitle = $('.contact-title'),
@@ -12,7 +59,7 @@
                 }
             },
             ajaxSuccess = function (data){
-                //try{}catch(e){}
+                try{yaCounter34013940.reachGoal('sendData');}catch(e){}
                 $btnSubmit.button('reset');
                 closeAlert();
                 $contactTitle.html('Спасибо, заявка отправлена');

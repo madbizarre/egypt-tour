@@ -80,12 +80,7 @@
 /* FONTS
 -------------------------------------------------- */
 
-@import url(https://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic);
-//font-family: 'Comfortaa', cursive;
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
-//font-family: 'Open Sans';
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
-@import url(http://fonts.googleapis.com/css?family=Arvo:700);
 
 /* VARIABLES
 -------------------------------------------------- */
@@ -103,37 +98,26 @@ body {
   overflow-x: hidden;
 }
 
-main {
-
-}
-
 section {
   padding: 25px 0;
-  h1 {
-    padding-bottom: 0;
-  }
 }
 
 hr {
   border-top: 1px solid #000;
 }
 
-.vcenter {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
-}
-
-.btn-default-lg, .btn-default-sm {
+.btn-default-lg {
   color: black;
   @include border-radius(0);
   font-family: 'Open Sans';
   font-size: larger;
-  background-color: $red;
-  @include transition(background 0.3s ease-in-out);
+  font-weight: bold;
+  background-color: #84C512;
+  border: 1px black solid;
+  @include transition(background .3s ease-in-out);
   &:hover {
-    background-color: lighten($red, 10%);
-    @include transition(background 0.3s ease-in-out);
+    background-color: lighten(#84C512, 5);
+    @include transition(background .3s ease-in-out);
   }
   &.dark-blue:hover {
     background-color: lighten($dark-blue, 10%);
@@ -145,57 +129,8 @@ hr {
   outline: none !important;
 }
 
-.btn-transparent {
-  background-color: rgba(235, 235, 235, 0.6);
-  border: 1px black solid;
-  font-weight: bold;
-  &:hover {
-    background-color: #84C512;
-  }
-}
-
-.btn-orange {
-  background-color: #EF6A21;
-  border: 1px black solid;
-  font-weight: bold;
-  &:hover {
-    background-color: lighten(#EF6A21, 2);
-  }
-}
-
-.btn-orange2 {
-  background-color: #FDBC62;
-  border: 1px black solid;
-  font-weight: bold;
-  &:hover {
-    background-color: darken(#FDBC62, 5);
-  }
-}
-
-.btn-green {
-  background-color: #84C512;
-  border: 1px black solid;
-  font-weight: bold;
-  &:hover {
-    background-color: lighten(#84C512, 5);
-  }
-}
-
-.btn-blue {
-  background-color: #77B3D4;
-  border: 1px black solid;
-  font-weight: bold;
-  &:hover {
-    background-color: darken(#77B3D4, 5);
-  }
-}
-
 .btn-default-lg {
   padding: 15px 56px;
-}
-
-.btn-default-sm {
-  padding: 7px 28px;
 }
 
 .btn-round {
@@ -211,18 +146,9 @@ hr {
 }
 
 .white {
-  background-color: #ffffff;
+  background-color: #fefefe;
 }
 
-.dark-blue {
-  background-color: $dark-blue;
-  color: invert($dark-blue);
-}
-
-.bold {
-  background: none;
-  font-weight: bold;
-}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -236,10 +162,8 @@ hr {
 
 #ham {
   background: #a4e333;
-  background: -moz-linear-gradient(top, rgba(164, 227, 51, 1) 0%, #7dbe0a 100%);
   background: -webkit-linear-gradient(top, rgba(164, 227, 51, 1) 0%, #7dbe0a 100%);
   background: linear-gradient(to bottom, rgba(164, 227, 51, 1) 0%, #7dbe0a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a4e333', endColorstr='#7dbe0a', GradientType=0);
   width: 90px;
   height: 90px;
   @include border-radius(50%);
@@ -271,10 +195,8 @@ hr {
   z-index: 499;
 
   background: #a4e333;
-  background: -moz-linear-gradient(top, rgba(164, 227, 51, 0.9) 0%, #7dbe0a 100%);
   background: -webkit-linear-gradient(top, rgba(164, 227, 51, 0.9) 0%, #7dbe0a 100%);
   background: linear-gradient(to bottom, rgba(164, 227, 51, 0.9) 0%, #7dbe0a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a4e333', endColorstr='#7dbe0a', GradientType=0);
   will-change: transform;
   position: fixed;
   top: 0;
@@ -350,14 +272,10 @@ hr {
     max-width: 100%;
     margin-bottom: 20px;
   }
-  .btn {
+  .btn-default-lg {
     max-width: 100%;
     margin-bottom: 20px;
   }
-
-  $rear-x-offset: 1em;
-  $ribbon-color: #e38242;
-
 }
 
 #hotToursLight, #searchTours {
@@ -367,10 +285,6 @@ hr {
 
 /* MAIN CONTENT
 -------------------------------------------------- */
-
-.divider {
-  margin: 80px 0;
-}
 
 .subtitle-divider {
   width: 20%;
@@ -417,6 +331,7 @@ hr {
   }
   img {
     -o-object-fit: cover;
+    -webkit-object-fit: cover;
     object-fit: cover;
     -o-object-position: top;
     -webkit-object-position: top;
@@ -666,92 +581,6 @@ hr {
   }
 }
 
-.css-modal-img {
-  height: 60vh;
-  max-width: 80vw;
-  width: auto;
-  @include border-radius(5px);
-  object-fit: cover;
-  -o-object-fit: cover;
-}
-
-/* **************CSS **
- * Modal window
- * *************** */
-.css-modal {
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  text-shadow: 0 1px 0 #333;
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
-  @include transition(opacity .4s linear);
-  @include transform(translate(0, 100%));
-  z-index: 1050;
-}
-
-.modal-inner {
-  position: fixed;
-  top: 5vh;
-  left: 20%;
-  right: 20%;
-  padding: 20px;
-  max-width: 80vw;
-  @include box-shadow(0 0 15px rgba(0, 0, 0, 0.2));
-  @include box-sizing(border-box);
-  @include border-radius(15px);
-  background-color: rgba(255, 255, 255, .2);
-  z-index: 10;
-  h2 {
-    padding-bottom: 20px;
-  }
-}
-
-.css-modal-close {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  z-index: 1;
-  span {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, .74);
-    cursor: pointer;
-    text-indent: -9999px;
-    &:before, &:after {
-      content: "";
-      position: absolute;
-      top: 4px;
-      border: 1px solid #fff;
-      height: 30px;
-    }
-    &:before {
-      left: 19px;
-      @include transform(rotate(-45deg));
-    }
-    &:after {
-      right: 19px;
-      @include transform(rotate(45deg));
-    }
-  }
-}
-
-#modal-photo:target {
-  opacity: 1;
-  @include transform(translate(0, 0));
-}
-
 .map {
   padding-top: 0;
   padding-bottom: 400px;
@@ -775,15 +604,16 @@ footer {
   background: #a4e333;
   background: -webkit-linear-gradient(top, rgba(164, 227, 51, 0.7) 0%, #7dbe0a 100%);
   background: linear-gradient(to bottom, rgba(164, 227, 51, 0.7) 0%, #7dbe0a 100%);
-
-  padding-top: 50px;
-  padding-bottom: 40px;
+  padding: 40px 0;
 }
 
 .footer-list {
   color: #000;
   span {
     color: #f5f5f5;
+  }
+  address {
+    margin-top: 1em;
   }
 }
 
